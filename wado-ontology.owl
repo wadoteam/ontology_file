@@ -437,6 +437,23 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasIssue -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasIssue">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repoisitory"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasRepository -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasRepository">
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repoisitory"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2907,6 +2924,14 @@ isolated</dc:description>
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repoisitory">
         <rdfs:label>Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ScriptingLanguage -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ScriptingLanguage">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/HighLevelLanguage"/>
     </owl:Class>
     
 
