@@ -1329,7 +1329,7 @@ intended platform</dc:description>
     <!-- http://webprotege.stanford.edu/FunctionalParadigm -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/FunctionalParadigm">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/DeclarativeParadigm"/>
         <rdfs:label>FunctionalParadigm</rdfs:label>
     </owl:Class>
     
@@ -1686,7 +1686,7 @@ intended platform</dc:description>
     <!-- http://webprotege.stanford.edu/LogicParadigm -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/LogicParadigm">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/DeclarativeParadigm"/>
         <rdfs:label>LogicParadigm</rdfs:label>
     </owl:Class>
     
@@ -1952,7 +1952,7 @@ intended platform</dc:description>
     <!-- http://webprotege.stanford.edu/ObjectOrientedParadigm -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/ObjectOrientedParadigm">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm"/>
         <rdfs:label>ObjectOrientedParadigm</rdfs:label>
     </owl:Class>
     
@@ -2179,7 +2179,8 @@ isolated</dc:description>
     <!-- http://webprotege.stanford.edu/ProceduralParadigm -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/ProceduralParadigm">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ImperativeParadigm"/>
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherImperativeParadigm"/>
         <rdfs:label>ProceduralParadigm</rdfs:label>
     </owl:Class>
     
@@ -2868,6 +2869,14 @@ isolated</dc:description>
     
 
 
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#DynamicParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#DynamicParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+    </owl:Class>
+    
+
+
     <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#InterNetwork -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#InterNetwork">
@@ -2896,6 +2905,14 @@ isolated</dc:description>
     
 
 
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherDeclarativeParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherDeclarativeParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/DeclarativeParadigm"/>
+    </owl:Class>
+    
+
+
     <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherFormat -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherFormat">
@@ -2912,10 +2929,50 @@ isolated</dc:description>
     
 
 
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherImperativeParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherImperativeParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ImperativeParadigm"/>
+    </owl:Class>
+    
+
+
     <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherLinuxOS -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherLinuxOS">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Linux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherStructuredParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherStructuredParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ProbabilisticParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ProbabilisticParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#RecursiveParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#RecursiveParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm"/>
     </owl:Class>
     
 
@@ -2932,6 +2989,14 @@ isolated</dc:description>
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ScriptingLanguage">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/HighLevelLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Paradigm"/>
     </owl:Class>
     
 
@@ -3609,12 +3674,12 @@ isolated</dc:description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://webprotege.stanford.edu/DeclarativeParadigm"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/FunctionalParadigm"/>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/ImperativeParadigm"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/LogicParadigm"/>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/MultiParadigm"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/ObjectOrientedParadigm"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/ProceduralParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#DynamicParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ProbabilisticParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3655,6 +3720,14 @@ isolated</dc:description>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/FullVirtualization"/>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/ParaVirtualization"/>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/PartialVirtualization"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/FunctionalParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/LogicParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherDeclarativeParadigm"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3708,6 +3781,14 @@ isolated</dc:description>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/XML"/>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/YML"/>
             <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherFormat"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/ObjectOrientedParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherStructuredParadigm"/>
+            <rdf:Description rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#RecursiveParadigm"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
