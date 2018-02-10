@@ -1,0 +1,2998 @@
+@prefix : <http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dbc: <http://dbpedia.org/resource/Category:> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swo: <http://www.ebi.ac.uk/swo/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix edamontology: <http://edamontology.org#> .
+@prefix edamontology1: <http://edamontology.org/> .
+@base <http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1> .
+
+<http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1> rdf:type owl:Ontology ;
+                                                                 owl:imports swo:swo.owl .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#bit
+:bit rdf:type rdfs:Datatype .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#byte
+:byte rdf:type rdfs:Datatype ;
+      rdfs:label "B" ,
+                 "byte" .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#gigabyte
+:gigabyte rdf:type rdfs:Datatype .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#kilobit
+:kilobit rdf:type rdfs:Datatype .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#kilobyte
+:kilobyte rdf:type rdfs:Datatype .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#megabit
+:megabit rdf:type rdfs:Datatype .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#megabyte
+:megabyte rdf:type rdfs:Datatype .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#terabyte
+:terabyte rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/canBeUsedInIDE
+<http://webprotege.stanford.edu/canBeUsedInIDE> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                                owl:inverseOf <http://webprotege.stanford.edu/offerDevelopmentSupportFor> ;
+                                                rdfs:domain :Language ;
+                                                rdfs:range <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                rdfs:label "canBeUsedInIDE" .
+
+
+###  http://webprotege.stanford.edu/exploitsVulnerability
+<http://webprotege.stanford.edu/exploitsVulnerability> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                       rdfs:domain <http://webprotege.stanford.edu/Attack> ;
+                                                       rdfs:range <http://webprotege.stanford.edu/Vulnerability> ;
+                                                       rdfs:label "exploitsVulnerability" .
+
+
+###  http://webprotege.stanford.edu/hasAttackResult
+<http://webprotege.stanford.edu/hasAttackResult> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/Attack> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/AttackResult> ;
+                                                 rdfs:label "hasAttackResult" .
+
+
+###  http://webprotege.stanford.edu/hasAttackType
+<http://webprotege.stanford.edu/hasAttackType> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Attack> ;
+                                               rdfs:range <http://webprotege.stanford.edu/AttackType> ;
+                                               rdfs:label "hasAttackType" .
+
+
+###  http://webprotege.stanford.edu/hasCloudServiceModel
+<http://webprotege.stanford.edu/hasCloudServiceModel> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdfs:domain <http://webprotege.stanford.edu/Cloud> ;
+                                                      rdfs:range <http://webprotege.stanford.edu/CloudServiceModel> ;
+                                                      rdfs:label "hasCloudServiceModel" .
+
+
+###  http://webprotege.stanford.edu/hasCompilerType
+<http://webprotege.stanford.edu/hasCompilerType> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 owl:inverseOf <http://webprotege.stanford.edu/isCompilerTypeOf> ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/Compiler> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/CompilerType> ;
+                                                 rdfs:label "hasCompilerType" .
+
+
+###  http://webprotege.stanford.edu/hasGeneration
+<http://webprotege.stanford.edu/hasGeneration> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://webprotege.stanford.edu/hasLanguageType> ;
+                                               rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                               rdfs:range <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                               rdfs:label "hasGeneration" .
+
+
+###  http://webprotege.stanford.edu/hasIDETool
+<http://webprotege.stanford.edu/hasIDETool> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdfs:domain <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                            rdfs:range <http://webprotege.stanford.edu/Compiler> ,
+                                                       <http://webprotege.stanford.edu/IDEFacilitiy> ;
+                                            rdfs:label "hasIDETool" .
+
+
+###  http://webprotege.stanford.edu/hasLanguageDomain
+<http://webprotege.stanford.edu/hasLanguageDomain> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://webprotege.stanford.edu/hasLanguageType> ;
+                                                   rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                   rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguageDomain> ;
+                                                   rdfs:label "hasLanguageDomain" .
+
+
+###  http://webprotege.stanford.edu/hasLanguageType
+<http://webprotege.stanford.edu/hasLanguageType> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 owl:inverseOf <http://webprotege.stanford.edu/isLanguageTypeOf> ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguageDomain> ,
+                                                            <http://webprotege.stanford.edu/ProgrammingLanguageRunType> ,
+                                                            <http://webprotege.stanford.edu/ProgrammingLanguageType> ;
+                                                 rdfs:label "hasLanguageType" .
+
+
+###  http://webprotege.stanford.edu/hasRunType
+<http://webprotege.stanford.edu/hasRunType> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://webprotege.stanford.edu/hasLanguageType> ;
+                                            rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                            rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguageRunType> ;
+                                            rdfs:label "hasRunType" .
+
+
+###  http://webprotege.stanford.edu/hasTarget
+<http://webprotege.stanford.edu/hasTarget> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           rdfs:domain <http://webprotege.stanford.edu/Attack> ;
+                                           rdfs:range <http://webprotege.stanford.edu/AttackTarget> ;
+                                           rdfs:label "hasTarget" .
+
+
+###  http://webprotege.stanford.edu/hasTypeSystem
+<http://webprotege.stanford.edu/hasTypeSystem> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://webprotege.stanford.edu/hasLanguageType> ;
+                                               rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                               rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguageType> ;
+                                               rdfs:label "hasTypeSystem" .
+
+
+###  http://webprotege.stanford.edu/hasVCSIntegration
+<http://webprotege.stanford.edu/hasVCSIntegration> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   rdfs:domain <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                   rdfs:range <http://webprotege.stanford.edu/VCS> ;
+                                                   rdfs:label "hasVCSIntegration" .
+
+
+###  http://webprotege.stanford.edu/hasVirtualizationType
+<http://webprotege.stanford.edu/hasVirtualizationType> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                       owl:inverseOf <http://webprotege.stanford.edu/isVirtualizationTypeOf> ;
+                                                       rdfs:domain <http://webprotege.stanford.edu/VirtualMachine> ;
+                                                       rdfs:range <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                       rdfs:label "hasVirtualizationType" .
+
+
+###  http://webprotege.stanford.edu/hasVulnerabilityType
+<http://webprotege.stanford.edu/hasVulnerabilityType> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdfs:domain <http://webprotege.stanford.edu/Vulnerability> ;
+                                                      rdfs:range <http://webprotege.stanford.edu/VulnerabilityType> ;
+                                                      rdfs:label "hasVulnerabilityType" .
+
+
+###  http://webprotege.stanford.edu/isApplicationServerSpecificForLanuage
+<http://webprotege.stanford.edu/isApplicationServerSpecificForLanuage> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                       rdfs:domain <http://webprotege.stanford.edu/ApplicationServer> ;
+                                                                       rdfs:range <http://webprotege.stanford.edu/HighLevelLanguage> ;
+                                                                       rdfs:label "isApplicationServerSpecificForLanuage" .
+
+
+###  http://webprotege.stanford.edu/isCompiledBy
+<http://webprotege.stanford.edu/isCompiledBy> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                              owl:inverseOf <http://webprotege.stanford.edu/isUsedToCompile> ;
+                                              rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                              rdfs:range <http://webprotege.stanford.edu/Compiler> ;
+                                              rdfs:label "isCompiledBy" .
+
+
+###  http://webprotege.stanford.edu/isCompilerTypeOf
+<http://webprotege.stanford.edu/isCompilerTypeOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                  rdfs:domain <http://webprotege.stanford.edu/CompilerType> ;
+                                                  rdfs:range <http://webprotege.stanford.edu/Compiler> ;
+                                                  rdfs:label "isCompilerTypeOf" .
+
+
+###  http://webprotege.stanford.edu/isGenerationOf
+<http://webprotege.stanford.edu/isGenerationOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://webprotege.stanford.edu/isLanguageTypeOf> ;
+                                                rdfs:domain <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                                rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                rdfs:label "isGenerationOf" .
+
+
+###  http://webprotege.stanford.edu/isImplementedBy
+<http://webprotege.stanford.edu/isImplementedBy> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/Framework> ;
+                                                 rdfs:label "isImplementedWithin"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/isLanguageDomainOf
+<http://webprotege.stanford.edu/isLanguageDomainOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://webprotege.stanford.edu/isLanguageTypeOf> ;
+                                                    rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguageDomain> ;
+                                                    rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                    rdfs:label "isLanguageDomainOf" .
+
+
+###  http://webprotege.stanford.edu/isLanguageTypeOf
+<http://webprotege.stanford.edu/isLanguageTypeOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                  rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                  rdfs:label "isLanguageTypeOf" .
+
+
+###  http://webprotege.stanford.edu/isRunTypeOf
+<http://webprotege.stanford.edu/isRunTypeOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://webprotege.stanford.edu/isLanguageTypeOf> ;
+                                             rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguageRunType> ;
+                                             rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                             rdfs:label "isRunTypeOf" .
+
+
+###  http://webprotege.stanford.edu/isTypeSystemOf
+<http://webprotege.stanford.edu/isTypeSystemOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://webprotege.stanford.edu/isLanguageTypeOf> ;
+                                                rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguageType> ;
+                                                rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                rdfs:label "isTypeSystemOf" .
+
+
+###  http://webprotege.stanford.edu/isUsedToCompile
+<http://webprotege.stanford.edu/isUsedToCompile> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/Compiler> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                 rdfs:label "isUsedToCompile" .
+
+
+###  http://webprotege.stanford.edu/isVirtualizationTypeOf
+<http://webprotege.stanford.edu/isVirtualizationTypeOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/VirtualMachine> ;
+                                                        rdfs:label "isVirtualizationTypeOf" .
+
+
+###  http://webprotege.stanford.edu/offerDevelopmentSupportFor
+<http://webprotege.stanford.edu/offerDevelopmentSupportFor> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                            rdfs:domain <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                            rdfs:range :Language ;
+                                                            rdfs:label "offerDevelopmentSupportFor" .
+
+
+###  http://webprotege.stanford.edu/runOS
+<http://webprotege.stanford.edu/runOS> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                       rdfs:domain <http://webprotege.stanford.edu/VirtualMachine> ;
+                                       rdfs:range <http://webprotege.stanford.edu/OperatingSystem> ;
+                                       rdfs:label "runOS" .
+
+
+###  http://webprotege.stanford.edu/supportParadigm
+<http://webprotege.stanford.edu/supportParadigm> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/Paradigm> ;
+                                                 rdfs:label "supportParadigm" .
+
+
+###  http://webprotege.stanford.edu/useAttackTool
+<http://webprotege.stanford.edu/useAttackTool> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Attack> ;
+                                               rdfs:range <http://webprotege.stanford.edu/AttackTool> ;
+                                               rdfs:label "useAttackTool" .
+
+
+###  http://webprotege.stanford.edu/useDataFormat
+<http://webprotege.stanford.edu/useDataFormat> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://webprotege.stanford.edu/WebServiceProtocol> ;
+                                               rdfs:range <http://webprotege.stanford.edu/DataFormat> ;
+                                               rdfs:label "useDataFormat" .
+
+
+###  http://webprotege.stanford.edu/usePackageManager
+<http://webprotege.stanford.edu/usePackageManager> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   rdfs:domain <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ,
+                                                               <http://webprotege.stanford.edu/OperatingSystem> ;
+                                                   rdfs:range <http://webprotege.stanford.edu/PackageManagerTool> ;
+                                                   rdfs:label "usePackageManager" .
+
+
+###  http://webprotege.stanford.edu/usePlugin
+<http://webprotege.stanford.edu/usePlugin> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           rdfs:domain <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                           rdfs:range <http://webprotege.stanford.edu/IDEPlugin> ;
+                                           rdfs:label "usePlugin" .
+
+
+###  http://webprotege.stanford.edu/useVirtualizationType
+<http://webprotege.stanford.edu/useVirtualizationType> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                       rdfs:domain <http://webprotege.stanford.edu/Cloud> ;
+                                                       rdfs:range <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                       rdfs:label "useVirtualizationType" .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasDevelopmentStatus
+:hasDevelopmentStatus rdf:type owl:ObjectProperty ;
+                      rdfs:range :DevelopmentStatus .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasIssue
+:hasIssue rdf:type owl:ObjectProperty ;
+          rdfs:domain :Repository ;
+          rdfs:range :Issue .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasLicense
+:hasLicense rdf:type owl:ObjectProperty ;
+            rdfs:range :License .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasRepository
+:hasRepository rdf:type owl:ObjectProperty ;
+               rdfs:range :Repository .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#isFrameworkFor
+:isFrameworkFor rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://webprotege.stanford.edu/Framework> ;
+                rdfs:range :Language .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#useSDK
+:useSDK rdf:type owl:ObjectProperty ;
+        rdfs:domain :Language ;
+        rdfs:range <http://webprotege.stanford.edu/SDK> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#useVirtualMachine
+:useVirtualMachine rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Language ;
+                   rdfs:range <http://webprotege.stanford.edu/VirtualMachine> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasCreatedDate
+:hasCreatedDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Issue ;
+                rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/resource/Ajax_framework
+dbr:Ajax_framework rdf:type owl:Class ;
+                   owl:equivalentClass <http://webprotege.stanford.edu/AjaxFramework> .
+
+
+###  http://dbpedia.org/resource/Application_framework
+dbr:Application_framework rdf:type owl:Class ;
+                          owl:equivalentClass <http://webprotege.stanford.edu/ApplicationFramework> .
+
+
+###  http://dbpedia.org/resource/CSS_frameworks
+dbr:CSS_frameworks rdf:type owl:Class ;
+                   owl:equivalentClass <http://webprotege.stanford.edu/CSSFramework> .
+
+
+###  http://dbpedia.org/resource/Programming_language
+dbr:Programming_language rdf:type owl:Class ;
+                         owl:equivalentClass <http://webprotege.stanford.edu/ProgrammingLanguage> ,
+                                             :Language .
+
+
+###  http://dbpedia.org/resource/Software_framework
+dbr:Software_framework rdf:type owl:Class ;
+                       owl:equivalentClass <http://webprotege.stanford.edu/Framework> .
+
+
+###  http://edamontology.org/format_1915
+edamontology1:format_1915 rdf:type owl:Class ;
+                          owl:equivalentClass obo:IAO_0000098 ,
+                                              <http://webprotege.stanford.edu/DataFormat> .
+
+
+###  http://edamontology.org/format_2332
+edamontology1:format_2332 rdf:type owl:Class ;
+                          owl:equivalentClass <http://webprotege.stanford.edu/XML> .
+
+
+###  http://edamontology.org/format_3464
+edamontology1:format_3464 rdf:type owl:Class ;
+                          owl:equivalentClass <http://webprotege.stanford.edu/JSON> .
+
+
+###  http://edamontology.org/format_3750
+edamontology1:format_3750 rdf:type owl:Class ;
+                          owl:equivalentClass <http://webprotege.stanford.edu/YML> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000025
+obo:IAO_0000025 rdf:type owl:Class ;
+                owl:equivalentClass <http://webprotege.stanford.edu/ProgrammingLanguage> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000098
+obo:IAO_0000098 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000129
+obo:IAO_0000129 rdf:type owl:Class ;
+                owl:equivalentClass <http://webprotege.stanford.edu/Version> .
+
+
+###  http://webprotege.stanford.edu/AbstractSyntaxTreeInterpreter
+<http://webprotege.stanford.edu/AbstractSyntaxTreeInterpreter> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://webprotege.stanford.edu/Interpreter> ;
+                                                               dc:description "transform the source code into an optimized abstract syntax tree, then execute the program following this tree structure"^^xsd:string ;
+                                                               rdfs:label "AbstractSyntaxTreeInterpreter" .
+
+
+###  http://webprotege.stanford.edu/Account
+<http://webprotege.stanford.edu/Account> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> ;
+                                         rdfs:label "Account" .
+
+
+###  http://webprotege.stanford.edu/Agile
+<http://webprotege.stanford.edu/Agile> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                       dc:description "requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams and their customer"^^xsd:string ;
+                                       rdfs:label "Agile" .
+
+
+###  http://webprotege.stanford.edu/AjaxFramework
+<http://webprotege.stanford.edu/AjaxFramework> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                               dc:description "a set of Web development techniques using many Web technologies on the client side to create asynchronous Web applications"^^xsd:string ;
+                                               rdfs:label "AjaxFramework" .
+
+
+###  http://webprotege.stanford.edu/Android
+<http://webprotege.stanford.edu/Android> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/Unix> ;
+                                         rdfs:label "Android" .
+
+
+###  http://webprotege.stanford.edu/Apache
+<http://webprotege.stanford.edu/Apache> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/WebServer> ;
+                                        dc:description "The Apache HTTP Server is free and open-source cross-platform web server software. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation."^^xsd:string ;
+                                        rdfs:label "Apache" .
+
+
+###  http://webprotege.stanford.edu/AppleOS
+<http://webprotege.stanford.edu/AppleOS> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/Unix> ;
+                                         rdfs:label "AppleOS" .
+
+
+###  http://webprotege.stanford.edu/AppleSpecificIDE
+<http://webprotege.stanford.edu/AppleSpecificIDE> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                  owl:disjointWith <http://webprotege.stanford.edu/MicrosoftSpecificIDE> ;
+                                                  rdfs:label "AppleSpecificIDE" .
+
+
+###  http://webprotege.stanford.edu/ApplicationFramework
+<http://webprotege.stanford.edu/ApplicationFramework> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                                      dc:description "used to implement the standard structure of an application for a specific operating system"^^xsd:string ;
+                                                      rdfs:label "ApplicationFramework" .
+
+
+###  http://webprotege.stanford.edu/ApplicationLanguages
+<http://webprotege.stanford.edu/ApplicationLanguages> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageDomain> ;
+                                                      dc:description "used to build the actual business applications"^^xsd:string ;
+                                                      rdfs:label "ApplicationLanguages" .
+
+
+###  http://webprotege.stanford.edu/ApplicationLayerAttack
+<http://webprotege.stanford.edu/ApplicationLayerAttack> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                        dc:description "targets application servers by deliberately causing a fault in a server's operating system or applications"^^xsd:string ;
+                                                        rdfs:label "ApplicationLayerAttack" .
+
+
+###  http://webprotege.stanford.edu/ApplicationServer
+<http://webprotege.stanford.edu/ApplicationServer> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                                   dc:description "expose back-end business logic through various protocols, sometimes including HTTP"^^xsd:string ;
+                                                   rdfs:label "ApplicationServer" .
+
+
+###  http://webprotege.stanford.edu/ApplicationVirtualization
+<http://webprotege.stanford.edu/ApplicationVirtualization> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                           dc:description """provides an abstraction in which the traditional applications are
+wrapped inside a container, thus giving an illusion to the application that it is running on an
+intended platform"""^^xsd:string ;
+                                                           rdfs:label "ApplicationVirtualization" .
+
+
+###  http://webprotege.stanford.edu/ArchitecturalLanguages
+<http://webprotege.stanford.edu/ArchitecturalLanguages> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageDomain> ;
+                                                        dc:description "best used to build frameworks that support (make easy) application building"^^xsd:string ;
+                                                        rdfs:label "ArchitecturalLanguages" .
+
+
+###  http://webprotege.stanford.edu/ArchitecturalPattern
+<http://webprotege.stanford.edu/ArchitecturalPattern> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Concept> ;
+                                                      rdfs:label "ArchitecturalPattern" .
+
+
+###  http://webprotege.stanford.edu/ArtificialIntelligencePattern
+<http://webprotege.stanford.edu/ArtificialIntelligencePattern> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                               rdfs:label "ArtificialIntelligencePattern" .
+
+
+###  http://webprotege.stanford.edu/AssemblyLanguage
+<http://webprotege.stanford.edu/AssemblyLanguage> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/LowLevelLanguage> ;
+                                                  owl:disjointWith <http://webprotege.stanford.edu/MachineLanguage> ;
+                                                  rdfs:label "AssemblyLanguage" .
+
+
+###  http://webprotege.stanford.edu/Attack
+<http://webprotege.stanford.edu/Attack> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                        rdfs:label "Attack" .
+
+
+###  http://webprotege.stanford.edu/AttackResult
+<http://webprotege.stanford.edu/AttackResult> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                              rdfs:label "AttackResult"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/AttackTarget
+<http://webprotege.stanford.edu/AttackTarget> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                              rdfs:label "AttackTarget"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/AttackTool
+<http://webprotege.stanford.edu/AttackTool> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                            rdfs:label "AttackTool"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/AttackType
+<http://webprotege.stanford.edu/AttackType> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                            rdfs:label "AttackType"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/Authenticate
+<http://webprotege.stanford.edu/Authenticate> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                              rdfs:label "Authenticate" .
+
+
+###  http://webprotege.stanford.edu/AutonomusAgent
+<http://webprotege.stanford.edu/AutonomusAgent> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                                rdfs:label "AutonomusAgent" .
+
+
+###  http://webprotege.stanford.edu/BrokenAccessControl
+<http://webprotege.stanford.edu/BrokenAccessControl> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                     dc:description "restrictions on what authenticated users are allowed to do are often not properly enforced"^^xsd:string ;
+                                                     rdfs:label "BrokenAccessControl" .
+
+
+###  http://webprotege.stanford.edu/BrokenAuthentication
+<http://webprotege.stanford.edu/BrokenAuthentication> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                      dc:description "authentication and session management are often implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens"^^xsd:string ;
+                                                      rdfs:label "BrokenAuthentication" .
+
+
+###  http://webprotege.stanford.edu/BuildAutomationTool
+<http://webprotege.stanford.edu/BuildAutomationTool> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/IDEFacilitiy> ;
+                                                     rdfs:label "BuildAutomationTool" .
+
+
+###  http://webprotege.stanford.edu/Bypass
+<http://webprotege.stanford.edu/Bypass> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                        rdfs:label "Bypass" .
+
+
+###  http://webprotege.stanford.edu/BytecodeCompiler
+<http://webprotege.stanford.edu/BytecodeCompiler> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/CompilerType> ;
+                                                  dc:description "compile to assembly language"^^xsd:string ;
+                                                  rdfs:label "BytecodeCompiler" .
+
+
+###  http://webprotege.stanford.edu/BytecodeInterpreter
+<http://webprotege.stanford.edu/BytecodeInterpreter> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Interpreter> ;
+                                                     dc:description "interpret a \"compiled\" code" ;
+                                                     rdfs:label "BytecodeInterpreter" .
+
+
+###  http://webprotege.stanford.edu/CSSFramework
+<http://webprotege.stanford.edu/CSSFramework> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                              dc:description "is meant to allow for easier, more standards-compliant web design using the Cascading Style Sheets language"^^xsd:string ;
+                                              rdfs:label "CSSFramework" .
+
+
+###  http://webprotege.stanford.edu/CentOS
+<http://webprotege.stanford.edu/CentOS> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                        rdfs:label "CentOS" .
+
+
+###  http://webprotege.stanford.edu/CentralizedVCS
+<http://webprotege.stanford.edu/CentralizedVCS> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/VCS> ;
+                                                dc:description "single “central” copy of your project on a server and commit your changes to this central copy."^^xsd:string ;
+                                                rdfs:label "CentralizedVCS" .
+
+
+###  http://webprotege.stanford.edu/Cloud
+<http://webprotege.stanford.edu/Cloud> rdf:type owl:Class ;
+                                       rdfs:subClassOf owl:Thing ;
+                                       rdfs:label "Cloud" .
+
+
+###  http://webprotege.stanford.edu/CloudBasedIDE
+<http://webprotege.stanford.edu/CloudBasedIDE> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                               rdfs:label "CloudBasedIDE" .
+
+
+###  http://webprotege.stanford.edu/CloudServiceModel
+<http://webprotege.stanford.edu/CloudServiceModel> rdf:type owl:Class ;
+                                                   rdfs:subClassOf owl:Thing ;
+                                                   rdfs:label "CloudServiceModel" .
+
+
+###  http://webprotege.stanford.edu/Cobalt
+<http://webprotege.stanford.edu/Cobalt> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                        rdfs:label "Cobalt" .
+
+
+###  http://webprotege.stanford.edu/CodeEditor
+<http://webprotege.stanford.edu/CodeEditor> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/IDEFacilitiy> ;
+                                            rdfs:label "CodeEditor" .
+
+
+###  http://webprotege.stanford.edu/CompiledLanguage
+<http://webprotege.stanford.edu/CompiledLanguage> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageRunType> ;
+                                                  owl:disjointWith <http://webprotege.stanford.edu/InterpretedLanguage> ;
+                                                  rdfs:label "CompiledLanguage" .
+
+
+###  http://webprotege.stanford.edu/Compiler
+<http://webprotege.stanford.edu/Compiler> rdf:type owl:Class ;
+                                          rdfs:label "Compiler" .
+
+
+###  http://webprotege.stanford.edu/CompilerType
+<http://webprotege.stanford.edu/CompilerType> rdf:type owl:Class ;
+                                              rdfs:subClassOf owl:Thing ;
+                                              rdfs:label "CompilerType" .
+
+
+###  http://webprotege.stanford.edu/Component
+<http://webprotege.stanford.edu/Component> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> ;
+                                           rdfs:label "Component" .
+
+
+###  http://webprotege.stanford.edu/CompromisedKeyAttack
+<http://webprotege.stanford.edu/CompromisedKeyAttack> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                      dc:description "an attacker uses the compromised key to gain access to a secured communication without the sender or receiver being aware of the attack"^^xsd:string ;
+                                                      rdfs:label "CompromisedKeyAttack" .
+
+
+###  http://webprotege.stanford.edu/Computer
+<http://webprotege.stanford.edu/Computer> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> ;
+                                          rdfs:label "Computer" .
+
+
+###  http://webprotege.stanford.edu/Concept
+<http://webprotege.stanford.edu/Concept> rdf:type owl:Class ;
+                                         owl:equivalentClass skos:Concept ;
+                                         rdfs:subClassOf owl:Thing ;
+                                         rdfs:label "Concept" .
+
+
+###  http://webprotege.stanford.edu/ConfigurationManagementTool
+<http://webprotege.stanford.edu/ConfigurationManagementTool> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://webprotege.stanford.edu/BuildAutomationTool> ;
+                                                             dc:description "establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life"^^xsd:string ;
+                                                             rdfs:label "ConfigurationManagementTool" .
+
+
+###  http://webprotege.stanford.edu/ConfigurationVulnerability
+<http://webprotege.stanford.edu/ConfigurationVulnerability> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://webprotege.stanford.edu/VulnerabilityType> ;
+                                                            rdfs:label "ConfigurationVulnerability" .
+
+
+###  http://webprotege.stanford.edu/ContentManagementFramework
+<http://webprotege.stanford.edu/ContentManagementFramework> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                                            dc:description "reusable components of a content management system used to manage web content"^^xsd:string ;
+                                                            rdfs:label "ContentManagementFramework" .
+
+
+###  http://webprotege.stanford.edu/ContinuousIntegrationTool
+<http://webprotege.stanford.edu/ContinuousIntegrationTool> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://webprotege.stanford.edu/BuildAutomationTool> ;
+                                                           dc:description "Offer support for CI (practice of merging all developer working copies to a shared mainline several times a day)"^^xsd:string ;
+                                                           rdfs:label "ContinuousIntegrationTool" .
+
+
+###  http://webprotege.stanford.edu/Copy
+<http://webprotege.stanford.edu/Copy> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                      rdfs:label "Copy" .
+
+
+###  http://webprotege.stanford.edu/CorruptionOfInformation
+<http://webprotege.stanford.edu/CorruptionOfInformation> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackResult> ;
+                                                         rdfs:label "CorruptionOfInformation" .
+
+
+###  http://webprotege.stanford.edu/CrossCompiler
+<http://webprotege.stanford.edu/CrossCompiler> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Compiler> ;
+                                               owl:disjointWith <http://webprotege.stanford.edu/NativeCompiler> ;
+                                               dc:description "output is intended to  run on other types of computer and operating system that the compiler itself runs on"^^xsd:string ;
+                                               rdfs:label "CrossCompiler" .
+
+
+###  http://webprotege.stanford.edu/CrossSiteScripting
+<http://webprotege.stanford.edu/CrossSiteScripting> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                    dc:description "XSS allows attackers to execute scripts in the victim's browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites"^^xsd:string ;
+                                                    rdfs:label "CrossSiteScripting" .
+
+
+###  http://webprotege.stanford.edu/Crystal
+<http://webprotege.stanford.edu/Crystal> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                         dc:description "is a collection of Agile software development approaches, focuses primarily on people and the interaction among them while they work on a software development project"^^xsd:string ;
+                                         rdfs:label "Crystal" .
+
+
+###  http://webprotege.stanford.edu/Data
+<http://webprotege.stanford.edu/Data> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> ;
+                                      rdfs:label "Data" .
+
+
+###  http://webprotege.stanford.edu/DataArchitecturePattern
+<http://webprotege.stanford.edu/DataArchitecturePattern> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                         rdfs:label "DataArchitecturePattern" .
+
+
+###  http://webprotege.stanford.edu/DataFormat
+<http://webprotege.stanford.edu/DataFormat> rdf:type owl:Class ;
+                                            rdfs:subClassOf owl:Thing ;
+                                            rdfs:label "DataFormat" .
+
+
+###  http://webprotege.stanford.edu/DataIntegrationPattern
+<http://webprotege.stanford.edu/DataIntegrationPattern> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                        rdfs:label "DataIntegrationPattern" .
+
+
+###  http://webprotege.stanford.edu/DataModelingPattern
+<http://webprotege.stanford.edu/DataModelingPattern> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                     rdfs:label "DataModelingPattern" .
+
+
+###  http://webprotege.stanford.edu/DataModificationAttack
+<http://webprotege.stanford.edu/DataModificationAttack> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                        dc:description "an attacker can modify the data in the packet without the knowledge of the sender or receiver"^^xsd:string ;
+                                                        rdfs:label "DataModificationAttack" .
+
+
+###  http://webprotege.stanford.edu/DataTap
+<http://webprotege.stanford.edu/DataTap> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                         rdfs:label "DataTap" .
+
+
+###  http://webprotege.stanford.edu/Database
+<http://webprotege.stanford.edu/Database> rdf:type owl:Class ;
+                                          rdfs:subClassOf owl:Thing ;
+                                          rdfs:label "Database" .
+
+
+###  http://webprotege.stanford.edu/DatabaseServer
+<http://webprotege.stanford.edu/DatabaseServer> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                                rdfs:label "DatabaseServer" .
+
+
+###  http://webprotege.stanford.edu/Debian
+<http://webprotege.stanford.edu/Debian> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                        rdfs:label "Debian" .
+
+
+###  http://webprotege.stanford.edu/Debugger
+<http://webprotege.stanford.edu/Debugger> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://webprotege.stanford.edu/IDEFacilitiy> ;
+                                          rdfs:label "Debugger" .
+
+
+###  http://webprotege.stanford.edu/DeclarativeParadigm
+<http://webprotege.stanford.edu/DeclarativeParadigm> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> ;
+                                                     rdfs:label "DeclarativeParadigm" .
+
+
+###  http://webprotege.stanford.edu/DeductiveDatabase
+<http://webprotege.stanford.edu/DeductiveDatabase> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                   dc:description "make deductions  based on rules and facts stored in the (deductive) database"^^xsd:string ;
+                                                   rdfs:label "DeductiveDatabase" .
+
+
+###  http://webprotege.stanford.edu/Delete
+<http://webprotege.stanford.edu/Delete> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                        rdfs:label "Delete" .
+
+
+###  http://webprotege.stanford.edu/DenialOfService
+<http://webprotege.stanford.edu/DenialOfService> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/AttackResult> ;
+                                                 rdfs:label "DenialOfService" .
+
+
+###  http://webprotege.stanford.edu/DenialOfServiceAttack
+<http://webprotege.stanford.edu/DenialOfServiceAttack> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                       dc:description "prevents normal use of your computer or network by valid users"^^xsd:string ;
+                                                       rdfs:label "DenialOfServiceAttack" .
+
+
+###  http://webprotege.stanford.edu/DesignVulnerability
+<http://webprotege.stanford.edu/DesignVulnerability> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/VulnerabilityType> ;
+                                                     rdfs:label "DesignVulnerability" .
+
+
+###  http://webprotege.stanford.edu/DesktopVirtualization
+<http://webprotege.stanford.edu/DesktopVirtualization> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                       rdfs:label "DesktopVirtualization" .
+
+
+###  http://webprotege.stanford.edu/DevelopmentMetodology
+<http://webprotege.stanford.edu/DevelopmentMetodology> rdf:type owl:Class ;
+                                                       rdfs:subClassOf owl:Thing ;
+                                                       rdfs:label "DevelopmentMetodology" .
+
+
+###  http://webprotege.stanford.edu/DisclosureOfInformation
+<http://webprotege.stanford.edu/DisclosureOfInformation> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackResult> ;
+                                                         rdfs:label "DisclosureOfInformation" .
+
+
+###  http://webprotege.stanford.edu/DistributedTool
+<http://webprotege.stanford.edu/DistributedTool> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                                 rdfs:label "DistributedTool" .
+
+
+###  http://webprotege.stanford.edu/DistributedVCS
+<http://webprotege.stanford.edu/DistributedVCS> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/VCS> ;
+                                                dc:description "cloning a copy of a repository locally so that you have the full history of the project"^^xsd:string ;
+                                                rdfs:label "DistributedVCS" .
+
+
+###  http://webprotege.stanford.edu/DocumentBasedDatabase
+<http://webprotege.stanford.edu/DocumentBasedDatabase> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/NoSql> ;
+                                                       dc:description "stores and managing documents or semi-structured data, rather than atomic data."^^xsd:string ;
+                                                       rdfs:label "DocumentBasedDatabase" .
+
+
+###  http://webprotege.stanford.edu/DynamicLibrary
+<http://webprotege.stanford.edu/DynamicLibrary> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/Library> ;
+                                                dc:description "linking of shared libraries is postponed until they are loaded"^^xsd:string ;
+                                                rdfs:label "DynamicLibrary" .
+
+
+###  http://webprotege.stanford.edu/DynamicSystemsDevelopmentModel
+<http://webprotege.stanford.edu/DynamicSystemsDevelopmentModel> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                                                dc:description "is an iterative, incremental approach that is largely based on the Rapid Application Development methodology"^^xsd:string ;
+                                                                rdfs:label "DynamicSystemsDevelopmentModel" .
+
+
+###  http://webprotege.stanford.edu/EavesdroppingAttack
+<http://webprotege.stanford.edu/EavesdroppingAttack> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                     dc:description "the majority of network communications occur in an unsecured or cleartext format, which allows an attacker who has gained access to data paths in your network to \"listen in\" or interpret (read) the traffic"^^xsd:string ;
+                                                     rdfs:label "EavesdroppingAttack" .
+
+
+###  http://webprotege.stanford.edu/FTPServer
+<http://webprotege.stanford.edu/FTPServer> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/InternetFileServers> ;
+                                           owl:disjointWith <http://webprotege.stanford.edu/HTTPServer> ;
+                                           rdfs:label "FTPServer" .
+
+
+###  http://webprotege.stanford.edu/FeatureDrivenDevelopment
+<http://webprotege.stanford.edu/FeatureDrivenDevelopment> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                                          dc:description "is an iterative and incremental software development process; it is a lightweight or Agile method for developing software"^^xsd:string ;
+                                                          rdfs:label "FeatureDrivenDevelopment" .
+
+
+###  http://webprotege.stanford.edu/Fedora
+<http://webprotege.stanford.edu/Fedora> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                        rdfs:label "Fedora" .
+
+
+###  http://webprotege.stanford.edu/FifthGeneration
+<http://webprotege.stanford.edu/FifthGeneration> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                                 dc:description "fifth-generation languages are designed to make the computer solve a given problem without the programmer"^^xsd:string ;
+                                                 rdfs:label "FifthGeneration" .
+
+
+###  http://webprotege.stanford.edu/FileServer
+<http://webprotege.stanford.edu/FileServer> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                            dc:description "provides shared disk access service for static files"^^xsd:string ;
+                                            rdfs:label "FileServer" .
+
+
+###  http://webprotege.stanford.edu/FirstGeneration
+<http://webprotege.stanford.edu/FirstGeneration> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                                 rdfs:label "FirstGeneration" .
+
+
+###  http://webprotege.stanford.edu/Flood
+<http://webprotege.stanford.edu/Flood> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                       rdfs:label "Flood" .
+
+
+###  http://webprotege.stanford.edu/FourthGeneration
+<http://webprotege.stanford.edu/FourthGeneration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                                  dc:description "provide a higher level of abstraction of the internal computer hardware then 3GL"^^xsd:string ;
+                                                  rdfs:label "FourthGeneration" .
+
+
+###  http://webprotege.stanford.edu/Framework
+<http://webprotege.stanford.edu/Framework> rdf:type owl:Class ;
+                                           rdfs:subClassOf owl:Thing ;
+                                           dc:description "is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software"^^xsd:string ;
+                                           rdfs:label "Framework" ,
+                                                      "Фреймворк"@ru .
+
+
+###  http://webprotege.stanford.edu/FullVirtualization
+<http://webprotege.stanford.edu/FullVirtualization> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/PlatformVirtualization> ;
+                                                    rdfs:label "FullVirtualization" .
+
+
+###  http://webprotege.stanford.edu/FunctionalParadigm
+<http://webprotege.stanford.edu/FunctionalParadigm> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/DeclarativeParadigm> ;
+                                                    rdfs:label "FunctionalParadigm" .
+
+
+###  http://webprotege.stanford.edu/GWS
+<http://webprotege.stanford.edu/GWS> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://webprotege.stanford.edu/WebServer> ;
+                                     dc:description "Google Web Server (GWS) – custom Linux-based Web server that Google uses for its online services."^^xsd:string ;
+                                     rdfs:label "GWS" .
+
+
+###  http://webprotege.stanford.edu/GraphDatabase
+<http://webprotege.stanford.edu/GraphDatabase> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/NoSql> ;
+                                               dc:description "use a graph structure.It is more flexible than a network model, allowing any node to connect with any other."^^xsd:string ;
+                                               rdfs:label "GraphDatabase" .
+
+
+###  http://webprotege.stanford.edu/GraphQL
+<http://webprotege.stanford.edu/GraphQL> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/WebServiceProtocol> ;
+                                         dc:description "GraphQL allows clients to define the structure of the data required, and exactly the same structure of the data is returned from the server"^^xsd:string ;
+                                         rdfs:label "GraphQL" .
+
+
+###  http://webprotege.stanford.edu/HTTPServer
+<http://webprotege.stanford.edu/HTTPServer> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/InternetFileServers> ;
+                                            rdfs:label "HTTPServer" .
+
+
+###  http://webprotege.stanford.edu/HardwareCompiler
+<http://webprotege.stanford.edu/HardwareCompiler> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/CompilerType> ;
+                                                  dc:description "compilers whose output is a description of the hardware configuration instead of a sequence of instructions"^^xsd:string ;
+                                                  rdfs:label "HardwareCompiler" .
+
+
+###  http://webprotege.stanford.edu/HierarchicalDatabase
+<http://webprotege.stanford.edu/HierarchicalDatabase> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                      dc:description "organizes data into a tree-like structure, where each record has a single parent or root"^^xsd:string ;
+                                                      rdfs:label "HierarchicalDatabase" .
+
+
+###  http://webprotege.stanford.edu/HighLevelLanguage
+<http://webprotege.stanford.edu/HighLevelLanguage> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                   owl:disjointWith <http://webprotege.stanford.edu/LowLevelLanguage> ;
+                                                   rdfs:label "HighLevelLanguage" .
+
+
+###  http://webprotege.stanford.edu/HorizontalSaaS
+<http://webprotege.stanford.edu/HorizontalSaaS> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/SaaS> ;
+                                                owl:disjointWith <http://webprotege.stanford.edu/VerticalSaaS> ;
+                                                dc:description "focus on a software category (marketing, sales, developer tools, HR) but are industry agnostic"^^xsd:string ;
+                                                rdfs:label "HorizontalSaaS" .
+
+
+###  http://webprotege.stanford.edu/HybridCloud
+<http://webprotege.stanford.edu/HybridCloud> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Cloud> ;
+                                             rdfs:label "HybridCloud" .
+
+
+###  http://webprotege.stanford.edu/HypertextDatabase
+<http://webprotege.stanford.edu/HypertextDatabase> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/ObjectOrientedDatabase> ;
+                                                   dc:description "allows any object to link to any other object. It’s useful for organizing lots of disparate data"^^xsd:string ;
+                                                   rdfs:label "HypertextDatabase" .
+
+
+###  http://webprotege.stanford.edu/IDEFacilitiy
+<http://webprotege.stanford.edu/IDEFacilitiy> rdf:type owl:Class ;
+                                              rdfs:subClassOf owl:Thing ;
+                                              rdfs:label "IDEFacility"@en .
+
+
+###  http://webprotege.stanford.edu/IDEPlugin
+<http://webprotege.stanford.edu/IDEPlugin> rdf:type owl:Class ;
+                                           rdfs:subClassOf owl:Thing ;
+                                           rdfs:label "IDEPlugin" .
+
+
+###  http://webprotege.stanford.edu/IIS
+<http://webprotege.stanford.edu/IIS> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://webprotege.stanford.edu/WebServer> ;
+                                     dc:description "Internet Information Services (IIS, formerly Internet Information Server) is an extensible web server created by Microsoft for use with the Windows NT family"^^xsd:string ;
+                                     rdfs:label "IIS" .
+
+
+###  http://webprotege.stanford.edu/IMAPServer
+<http://webprotege.stanford.edu/IMAPServer> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/MailServer> ;
+                                            dc:description "Internet Message Access Protocol (IMAP) is an Internet standard protocol used by e-mail clients to retrieve e-mail messages from a mail server over a TCP/IP connection"^^xsd:string ;
+                                            rdfs:label "IMAPServer" .
+
+
+###  http://webprotege.stanford.edu/IaaS
+<http://webprotege.stanford.edu/IaaS> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/CloudServiceModel> ;
+                                      dc:description "Infrastructure as a service\" (IaaS) refers to online services that provide high-level APIs used to dereference various low-level details of underlying network infrastructure like physical computing resources, location, data partitioning, scaling, security, backup"^^xsd:string ;
+                                      rdfs:label "IaaS" .
+
+
+###  http://webprotege.stanford.edu/IdentitySpoofingAttack
+<http://webprotege.stanford.edu/IdentitySpoofingAttack> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                        dc:description "an attacker might also use special programs to construct IP packets that appear to originate from valid addresses inside the corporate intranet"^^xsd:string ;
+                                                        rdfs:label "IdentitySpoofingAttack" .
+
+
+###  http://webprotege.stanford.edu/ImlementationVulnerability
+<http://webprotege.stanford.edu/ImlementationVulnerability> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://webprotege.stanford.edu/VulnerabilityType> ;
+                                                            rdfs:label "ImlementationVulnerability" .
+
+
+###  http://webprotege.stanford.edu/ImperativeParadigm
+<http://webprotege.stanford.edu/ImperativeParadigm> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> ;
+                                                    rdfs:label "ImperativeParadigm" .
+
+
+###  http://webprotege.stanford.edu/InformationExchange
+<http://webprotege.stanford.edu/InformationExchange> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                                     rdfs:label "InformationExchange" .
+
+
+###  http://webprotege.stanford.edu/Injection
+<http://webprotege.stanford.edu/Injection> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                           dc:description "injection flaws occur when untrusted data is sent to an interpreter as part of a command or query"^^xsd:string ;
+                                           rdfs:label "Injection" .
+
+
+###  http://webprotege.stanford.edu/InreasedAccess
+<http://webprotege.stanford.edu/InreasedAccess> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/AttackResult> ;
+                                                rdfs:label "InreasedAccess" .
+
+
+###  http://webprotege.stanford.edu/InsecureDeserialisation
+<http://webprotege.stanford.edu/InsecureDeserialisation> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                         dc:description "leads to remote code execution"^^xsd:string ;
+                                                         rdfs:label "InsecureDeserialisation" .
+
+
+###  http://webprotege.stanford.edu/InsufficientLoggingAndMonitoring
+<http://webprotege.stanford.edu/InsufficientLoggingAndMonitoring> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                                  rdfs:label "InsufficientLoggingAndMonitoring" .
+
+
+###  http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment
+<http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf owl:Thing ;
+                                                                  rdfs:label "IntegratedDevelopmentEnvironment" .
+
+
+###  http://webprotege.stanford.edu/InternetFileServers
+<http://webprotege.stanford.edu/InternetFileServers> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/FileServer> ;
+                                                     owl:disjointWith <http://webprotege.stanford.edu/LANFileServers> ;
+                                                     dc:description "serve file over internet"^^xsd:string ;
+                                                     rdfs:label "InternetFileServers" .
+
+
+###  http://webprotege.stanford.edu/InterpretedLanguage
+<http://webprotege.stanford.edu/InterpretedLanguage> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageRunType> ;
+                                                     rdfs:label "InterpretedLanguage" .
+
+
+###  http://webprotege.stanford.edu/Interpreter
+<http://webprotege.stanford.edu/Interpreter> rdf:type owl:Class ;
+                                             rdfs:subClassOf owl:Thing ;
+                                             dc:description "is a computer program that directly executes instructions written in a programming or scripting language, without requiring them previously to have been compiled into a machine language program"^^xsd:string ;
+                                             rdfs:label "Interpreter" .
+
+
+###  http://webprotege.stanford.edu/JSON
+<http://webprotege.stanford.edu/JSON> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/DataFormat> ;
+                                      rdfs:label "JSON" .
+
+
+###  http://webprotege.stanford.edu/JustInTimeCompiler
+<http://webprotege.stanford.edu/JustInTimeCompiler> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/CompilerType> ;
+                                                    dc:description "bytecode is  compiled using a JIT compiler to native machine code just when the execution of the program is required"^^xsd:string ;
+                                                    rdfs:label "JustInTimeCompiler" .
+
+
+###  http://webprotege.stanford.edu/LANFileServers
+<http://webprotege.stanford.edu/LANFileServers> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/FileServer> ;
+                                                dc:description "serve file over a local area"^^xsd:string ;
+                                                rdfs:label "LANFileServers" .
+
+
+###  http://webprotege.stanford.edu/LanguageGeneration
+<http://webprotege.stanford.edu/LanguageGeneration> rdf:type owl:Class ;
+                                                    rdfs:subClassOf owl:Thing ;
+                                                    rdfs:label "LanguageGeneration" .
+
+
+###  http://webprotege.stanford.edu/Lean
+<http://webprotege.stanford.edu/Lean> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                      dc:description "creates more value for customers with fewer resources"^^xsd:string ;
+                                      rdfs:label "Lean" .
+
+
+###  http://webprotege.stanford.edu/Library
+<http://webprotege.stanford.edu/Library> rdf:type owl:Class ;
+                                         rdfs:subClassOf owl:Thing ;
+                                         dc:description "a collection of non-volatile resources used by computer programs, often to develop software"^^xsd:string ;
+                                         rdfs:label "Library" .
+
+
+###  http://webprotege.stanford.edu/Linux
+<http://webprotege.stanford.edu/Linux> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/Unix> ;
+                                       rdfs:label "Linux" .
+
+
+###  http://webprotege.stanford.edu/LiteSpeedWebServer
+<http://webprotege.stanford.edu/LiteSpeedWebServer> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/WebServer> ;
+                                                    dc:description "LSWS is developed by privately held LiteSpeed Technologies."^^xsd:string ;
+                                                    rdfs:label "LiteSpeedWebServer" .
+
+
+###  http://webprotege.stanford.edu/LocalVCS
+<http://webprotege.stanford.edu/LocalVCS> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://webprotege.stanford.edu/VCS> ;
+                                          dc:description "information is been save local"^^xsd:string ;
+                                          rdfs:label "LocalVCS" .
+
+
+###  http://webprotege.stanford.edu/LogicParadigm
+<http://webprotege.stanford.edu/LogicParadigm> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/DeclarativeParadigm> ;
+                                               rdfs:label "LogicParadigm" .
+
+
+###  http://webprotege.stanford.edu/LowLevelLanguage
+<http://webprotege.stanford.edu/LowLevelLanguage> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguage> ;
+                                                  rdfs:label "LowLevelLanguage" .
+
+
+###  http://webprotege.stanford.edu/MSaaS
+<http://webprotege.stanford.edu/MSaaS> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/CloudServiceModel> ;
+                                       dc:description "in the mobile \"backend\" as a service model,  web app and mobile app developers are provided with a way to link their applications to cloud storage and cloud computing services like user management, push notifications, integration with social networking services and more."^^xsd:string ;
+                                       rdfs:label "MSaaS" .
+
+
+###  http://webprotege.stanford.edu/MacOS
+<http://webprotege.stanford.edu/MacOS> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/AppleOS> ;
+                                       owl:disjointWith <http://webprotege.stanford.edu/iOS> ;
+                                       rdfs:label "MacOS" .
+
+
+###  http://webprotege.stanford.edu/MachineLanguage
+<http://webprotege.stanford.edu/MachineLanguage> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/LowLevelLanguage> ;
+                                                 rdfs:label "MachineLanguage" .
+
+
+###  http://webprotege.stanford.edu/MailServer
+<http://webprotege.stanford.edu/MailServer> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                            rdfs:label "MailServer" .
+
+
+###  http://webprotege.stanford.edu/ManInTheMiddleAttack
+<http://webprotege.stanford.edu/ManInTheMiddleAttack> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                      dc:description "attack occurs when someone between you and the person with whom you are communicating is actively monitoring, capturing, and controlling your communication transparently"^^xsd:string ;
+                                                      rdfs:label "ManInTheMiddleAttack" .
+
+
+###  http://webprotege.stanford.edu/MarkupLanguage
+<http://webprotege.stanford.edu/MarkupLanguage> rdf:type owl:Class ;
+                                                rdfs:subClassOf :Language ;
+                                                rdfs:label "MarkupLanguage" .
+
+
+###  http://webprotege.stanford.edu/MasterDataManagementPattern
+<http://webprotege.stanford.edu/MasterDataManagementPattern> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                             rdfs:label "MasterDataManagementPattern" .
+
+
+###  http://webprotege.stanford.edu/MessagingPattern
+<http://webprotege.stanford.edu/MessagingPattern> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/DataIntegrationPattern> ;
+                                                  rdfs:label "MessagingPattern" .
+
+
+###  http://webprotege.stanford.edu/MicrosoftSpecificIDE
+<http://webprotege.stanford.edu/MicrosoftSpecificIDE> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                      rdfs:label "MicrosoftSpecificIDE" .
+
+
+###  http://webprotege.stanford.edu/Mint
+<http://webprotege.stanford.edu/Mint> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                      rdfs:label "Mint" .
+
+
+###  http://webprotege.stanford.edu/MobileDevelopmentIDE
+<http://webprotege.stanford.edu/MobileDevelopmentIDE> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                      rdfs:label "MobileDevelopmentIDE" .
+
+
+###  http://webprotege.stanford.edu/MobileServer
+<http://webprotege.stanford.edu/MobileServer> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                              dc:description "makes back-end systems accessible to mobile application"^^xsd:string ;
+                                              rdfs:label "MobileServer" .
+
+
+###  http://webprotege.stanford.edu/Modify
+<http://webprotege.stanford.edu/Modify> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                        rdfs:label "Modify" .
+
+
+###  http://webprotege.stanford.edu/MultiLanguageIDE
+<http://webprotege.stanford.edu/MultiLanguageIDE> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                  owl:disjointWith <http://webprotege.stanford.edu/SingleLanguageIDE> ;
+                                                  rdfs:label "MultiLanguageIDE" .
+
+
+###  http://webprotege.stanford.edu/MultiParadigm
+<http://webprotege.stanford.edu/MultiParadigm> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> ;
+                                               rdfs:label "MultiParadigm" .
+
+
+###  http://webprotege.stanford.edu/MultimediaDatabase
+<http://webprotege.stanford.edu/MultimediaDatabase> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/ObjectOrientedDatabase> ;
+                                                    dc:description "incorporates media, such as images, that could not be stored in a relational database"^^xsd:string ;
+                                                    rdfs:label "MultimediaDatabase" .
+
+
+###  http://webprotege.stanford.edu/MultimediaFramework
+<http://webprotege.stanford.edu/MultimediaFramework> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                                     dc:description "handles media on a computer and through a network"^^xsd:string ;
+                                                     rdfs:label "MultimediaFramework" .
+
+
+###  http://webprotege.stanford.edu/MultivalueDatabase
+<http://webprotege.stanford.edu/MultivalueDatabase> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/NoSql> ;
+                                                    dc:description "allowing attributes to contain a list of data rather than a single data point"^^xsd:string ;
+                                                    rdfs:label "MultivalueDatabase" .
+
+
+###  http://webprotege.stanford.edu/NFSFileServer
+<http://webprotege.stanford.edu/NFSFileServer> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/LANFileServers> ;
+                                               owl:disjointWith <http://webprotege.stanford.edu/SMBFileServer> ;
+                                               dc:description "Network File System (NFS) is a distributed file system protocol originally developed by Sun Microsystems allowing a user on a client computer to access files over a computer network."^^xsd:string ;
+                                               rdfs:label "NFSFileServer" .
+
+
+###  http://webprotege.stanford.edu/NativeCompiler
+<http://webprotege.stanford.edu/NativeCompiler> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/Compiler> ;
+                                                dc:description "output is intended to directly run on the same type of computer and operating system that the compiler itself runs on"^^xsd:string ;
+                                                rdfs:label "NativeCompiler" .
+
+
+###  http://webprotege.stanford.edu/Network
+<http://webprotege.stanford.edu/Network> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> ;
+                                         rdfs:label "Network" .
+
+
+###  http://webprotege.stanford.edu/NetworkDatabase
+<http://webprotege.stanford.edu/NetworkDatabase> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                 dc:description "Based on mathematical set theory, the model is constructed with sets of related records. Each set consists of one owner or parent record and one or more member or child records"^^xsd:string ;
+                                                 rdfs:label "NetworkDatabase" .
+
+
+###  http://webprotege.stanford.edu/NetworkVirtualization
+<http://webprotege.stanford.edu/NetworkVirtualization> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                       rdfs:label "NetworkVirtualization" .
+
+
+###  http://webprotege.stanford.edu/Nginx
+<http://webprotege.stanford.edu/Nginx> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/WebServer> ;
+                                       dc:description "Nginx is a web server which can also be used as a reverse proxy, load balancer and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004"^^xsd:string ;
+                                       rdfs:label "Nginx" .
+
+
+###  http://webprotege.stanford.edu/NoSql
+<http://webprotege.stanford.edu/NoSql> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                       rdfs:label "NoSql" .
+
+
+###  http://webprotege.stanford.edu/ObjectOrientedDatabase
+<http://webprotege.stanford.edu/ObjectOrientedDatabase> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                        dc:description "organiza data as a collection of objects, or reusable software elements, with associated features and methods"^^xsd:string ;
+                                                        rdfs:label "ObjectOrientedDatabase" .
+
+
+###  http://webprotege.stanford.edu/ObjectOrientedParadigm
+<http://webprotege.stanford.edu/ObjectOrientedParadigm> rdf:type owl:Class ;
+                                                        rdfs:subClassOf :StructuredParadigm ;
+                                                        rdfs:label "ObjectOrientedParadigm" .
+
+
+###  http://webprotege.stanford.edu/ObjectRelationalDatabase
+<http://webprotege.stanford.edu/ObjectRelationalDatabase> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                          dc:description "hybrid database model combines the simplicity of the relational model with some of the advanced functionality of the object-oriented database model"^^xsd:string ;
+                                                          rdfs:label "ObjectRelationalDatabase" .
+
+
+###  http://webprotege.stanford.edu/OpenProxy
+<http://webprotege.stanford.edu/OpenProxy> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/ProxyServer> ;
+                                           owl:disjointWith <http://webprotege.stanford.edu/ReverseProxy> ;
+                                           dc:description "An open proxy forwards requests from and to anywhere on the Internet"^^xsd:string ;
+                                           rdfs:label "OpenProxy" .
+
+
+###  http://webprotege.stanford.edu/OperatingSystem
+<http://webprotege.stanford.edu/OperatingSystem> rdf:type owl:Class ;
+                                                 rdfs:subClassOf owl:Thing ;
+                                                 rdfs:label "OperatingSystem" .
+
+
+###  http://webprotege.stanford.edu/OtherCloudModel
+<http://webprotege.stanford.edu/OtherCloudModel> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/Cloud> ;
+                                                 rdfs:label "OtherCloudModel" .
+
+
+###  http://webprotege.stanford.edu/OtherFramework
+<http://webprotege.stanford.edu/OtherFramework> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                                rdfs:label "OtherFramework" .
+
+
+###  http://webprotege.stanford.edu/OtherIDEFacility
+<http://webprotege.stanford.edu/OtherIDEFacility> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/IDEFacilitiy> ;
+                                                  rdfs:label "OtherIDEFacility" .
+
+
+###  http://webprotege.stanford.edu/OtherMethodology
+<http://webprotege.stanford.edu/OtherMethodology> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                                  rdfs:label "OtherMethodology" .
+
+
+###  http://webprotege.stanford.edu/OtherObjectOrientedDatabase
+<http://webprotege.stanford.edu/OtherObjectOrientedDatabase> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://webprotege.stanford.edu/ObjectOrientedDatabase> ;
+                                                             rdfs:label "OtherObjectOrientedDatabase" .
+
+
+###  http://webprotege.stanford.edu/OtherTool
+<http://webprotege.stanford.edu/OtherTool> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/BuildAutomationTool> ;
+                                           rdfs:label "OtherTool" .
+
+
+###  http://webprotege.stanford.edu/OtherVulnerability
+<http://webprotege.stanford.edu/OtherVulnerability> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                    rdfs:label "OtherVulnerability"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/Others
+<http://webprotege.stanford.edu/Others> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/WebServer> ;
+                                        rdfs:label "Others" .
+
+
+###  http://webprotege.stanford.edu/POP3Server
+<http://webprotege.stanford.edu/POP3Server> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/MailServer> ;
+                                            dc:description "Post Office Protocol is an Internet standard protocol used by e-mail clients to retrieve e-mail messages from a mail server over a TCP/IP connection. It is a simple, old protocol used befor IMAP"^^xsd:string ;
+                                            rdfs:label "POP3Server" .
+
+
+###  http://webprotege.stanford.edu/Paas
+<http://webprotege.stanford.edu/Paas> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/CloudServiceModel> ;
+                                      dc:description "Platform as a Service (PaaS)  offer a development environment to application developers."^^xsd:string ;
+                                      rdfs:label "Paas" .
+
+
+###  http://webprotege.stanford.edu/PackageManagerTool
+<http://webprotege.stanford.edu/PackageManagerTool> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/BuildAutomationTool> ;
+                                                    dc:description "automates the process of installing, upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner"^^xsd:string ;
+                                                    rdfs:label "PackageManagerTool" .
+
+
+###  http://webprotege.stanford.edu/ParaVirtualization
+<http://webprotege.stanford.edu/ParaVirtualization> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/PlatformVirtualization> ;
+                                                    dc:description """the guest programs run within in their own separate region, as though they are
+isolated"""^^xsd:string ;
+                                                    rdfs:label "ParaVirtualization" .
+
+
+###  http://webprotege.stanford.edu/Paradigm
+<http://webprotege.stanford.edu/Paradigm> rdf:type owl:Class ;
+                                          rdfs:subClassOf owl:Thing ;
+                                          dc:description "is a programming model based on distinct concepts"^^xsd:string ;
+                                          rdfs:label "Paradigm" .
+
+
+###  http://webprotege.stanford.edu/PartialVirtualization
+<http://webprotege.stanford.edu/PartialVirtualization> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/PlatformVirtualization> ;
+                                                       rdfs:label "PartialVirtualization" .
+
+
+###  http://webprotege.stanford.edu/PasswordBasedAttack
+<http://webprotege.stanford.edu/PasswordBasedAttack> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                                     dc:description "access rights to a computer and network resources are determined by who you are, that is, your user name and your password"^^xsd:string ;
+                                                     rdfs:label "PasswordBasedAttack" .
+
+
+###  http://webprotege.stanford.edu/PhisicalAttack
+<http://webprotege.stanford.edu/PhisicalAttack> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                                rdfs:label "PhisicalAttack" .
+
+
+###  http://webprotege.stanford.edu/PlatformVirtualization
+<http://webprotege.stanford.edu/PlatformVirtualization> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/VirtualizationType> ;
+                                                        rdfs:label "PlatformVirtualization" .
+
+
+###  http://webprotege.stanford.edu/PrivateCloud
+<http://webprotege.stanford.edu/PrivateCloud> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Cloud> ;
+                                              rdfs:label "PrivateCloud" .
+
+
+###  http://webprotege.stanford.edu/ProbabilisticDatabase
+<http://webprotege.stanford.edu/ProbabilisticDatabase> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                       dc:description "informations  have associated probabilities. Database use fuzzy logic to get correct information from uncertain data."^^xsd:string ;
+                                                       rdfs:label "ProbabilisticDatabase" .
+
+
+###  http://webprotege.stanford.edu/Probe
+<http://webprotege.stanford.edu/Probe> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                       rdfs:label "Probe" .
+
+
+###  http://webprotege.stanford.edu/ProceduralParadigm
+<http://webprotege.stanford.edu/ProceduralParadigm> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/ImperativeParadigm> ;
+                                                    owl:disjointWith :OtherImperativeParadigm ;
+                                                    rdfs:label "ProceduralParadigm" .
+
+
+###  http://webprotege.stanford.edu/Process
+<http://webprotege.stanford.edu/Process> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> ;
+                                         rdfs:label "Process" .
+
+
+###  http://webprotege.stanford.edu/ProcessVirtualMachines
+<http://webprotege.stanford.edu/ProcessVirtualMachines> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/VirtualMachine> ;
+                                                        owl:disjointWith <http://webprotege.stanford.edu/SystemVirtualMachines> ;
+                                                        dc:description "execute computer programs in a platform-independent environment"^^xsd:string ;
+                                                        rdfs:label "ProcessVirtualMachines" .
+
+
+###  http://webprotege.stanford.edu/ProgrammingLanguage
+<http://webprotege.stanford.edu/ProgrammingLanguage> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :Language ;
+                                                     rdfs:label "ProgrammingLanguage" .
+
+
+###  http://webprotege.stanford.edu/ProgrammingLanguageDomain
+<http://webprotege.stanford.edu/ProgrammingLanguageDomain> rdf:type owl:Class ;
+                                                           rdfs:subClassOf owl:Thing ;
+                                                           dc:description "classifying languages by problem-domain context"^^xsd:string ;
+                                                           rdfs:label "ProgrammingLanguageDomain" .
+
+
+###  http://webprotege.stanford.edu/ProgrammingLanguageRunType
+<http://webprotege.stanford.edu/ProgrammingLanguageRunType> rdf:type owl:Class ;
+                                                            rdfs:subClassOf owl:Thing ;
+                                                            rdfs:label "ProgrammingLanguageRunType"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/ProgrammingLanguageType
+<http://webprotege.stanford.edu/ProgrammingLanguageType> rdf:type owl:Class ;
+                                                         rdfs:subClassOf owl:Thing ;
+                                                         dc:description "defines how a programming language classifies values and expressions into types, how it can manipulate those types and how they interact."^^xsd:string ;
+                                                         rdfs:label "TypeSystem"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/ProxyServer
+<http://webprotege.stanford.edu/ProxyServer> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                             rdfs:label "ProxyServer" .
+
+
+###  http://webprotege.stanford.edu/PublicCloud
+<http://webprotege.stanford.edu/PublicCloud> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Cloud> ;
+                                             rdfs:label "PublicCloud" .
+
+
+###  http://webprotege.stanford.edu/QueryLanguage
+<http://webprotege.stanford.edu/QueryLanguage> rdf:type owl:Class ;
+                                               rdfs:subClassOf :Language ;
+                                               rdfs:label "QueryLanguage" .
+
+
+###  http://webprotege.stanford.edu/REST
+<http://webprotege.stanford.edu/REST> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/WebServiceProtocol> ;
+                                      dc:description "Representational State Transfer allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations"^^xsd:string ;
+                                      rdfs:label "REST" .
+
+
+###  http://webprotege.stanford.edu/RapidApplicationDevelopment
+<http://webprotege.stanford.edu/RapidApplicationDevelopment> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                                             rdfs:label "RapidApplicationDevelopment" .
+
+
+###  http://webprotege.stanford.edu/Read
+<http://webprotege.stanford.edu/Read> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                      rdfs:label "Read" .
+
+
+###  http://webprotege.stanford.edu/RedHat
+<http://webprotege.stanford.edu/RedHat> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                        rdfs:label "RedHat" .
+
+
+###  http://webprotege.stanford.edu/RelationalDatabase
+<http://webprotege.stanford.edu/RelationalDatabase> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                                    dc:description "sorts data into tables, also known as relations, each of which consists of columns and rows"^^xsd:string ;
+                                                    rdfs:label "RelationalDatabase" .
+
+
+###  http://webprotege.stanford.edu/RemoteLibrary
+<http://webprotege.stanford.edu/RemoteLibrary> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Library> ;
+                                               dc:description "separate executables (often in some lightweight form) and calling them using a remote procedure call (RPC) over a network to another computer."^^xsd:string ;
+                                               rdfs:label "RemoteLibrary"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/ReverseProxy
+<http://webprotege.stanford.edu/ReverseProxy> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/ProxyServer> ;
+                                              dc:description "reverse proxy takes requests from the Internet and forwarding them to servers in an internal network. Those making requests connect to the proxy and may not be aware of the internal network."^^xsd:string ;
+                                              rdfs:label "ReverseProxy" .
+
+
+###  http://webprotege.stanford.edu/SDK
+<http://webprotege.stanford.edu/SDK> rdf:type owl:Class ;
+                                     rdfs:subClassOf owl:Thing ;
+                                     dc:description "a software development kit (SDK or devkit) is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform"^^xsd:string ;
+                                     rdfs:label "SDK" .
+
+
+###  http://webprotege.stanford.edu/SMBFileServer
+<http://webprotege.stanford.edu/SMBFileServer> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/LANFileServers> ;
+                                               dc:description "Server Message Block also known as Common Internet File System operates as an application-layer network protocol[3] mainly used for providing shared access to files, printers, and serial ports and miscellaneous communications between nodes on a network"^^xsd:string ;
+                                               rdfs:label "SMBFileServer" .
+
+
+###  http://webprotege.stanford.edu/SMTPServer
+<http://webprotege.stanford.edu/SMTPServer> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/MailServer> ;
+                                            dc:description "Simple Mail Transfer Protocol (SMTP)"^^xsd:string ;
+                                            rdfs:label "SMTPServer" .
+
+
+###  http://webprotege.stanford.edu/SOAP
+<http://webprotege.stanford.edu/SOAP> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/WebServiceProtocol> ;
+                                      dc:description "SOAP (Simple Object Access Protocol) is a protocol specification for exchanging structured information in the implementation of web services in computer networks"^^xsd:string ;
+                                      rdfs:label "SOAP" .
+
+
+###  http://webprotege.stanford.edu/SaaS
+<http://webprotege.stanford.edu/SaaS> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/CloudServiceModel> ;
+                                      dc:description "In the software as a service (SaaS) model, users gain access to application software and databases"^^xsd:string ;
+                                      rdfs:label "SaaS" .
+
+
+###  http://webprotege.stanford.edu/Scan
+<http://webprotege.stanford.edu/Scan> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                      rdfs:label "Scan" .
+
+
+###  http://webprotege.stanford.edu/ScriptOrProgram
+<http://webprotege.stanford.edu/ScriptOrProgram> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                                 rdfs:label "ScriptOrProgram" .
+
+
+###  http://webprotege.stanford.edu/Scrum
+<http://webprotege.stanford.edu/Scrum> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                       dc:description "is designed for teams of three to nine developers who break their work into actions that can be completed within timeboxed iterations, called sprints and track progress and re-plan in stand-up meetings, called daily scrums"^^xsd:string ;
+                                       rdfs:label "Scrum" .
+
+
+###  http://webprotege.stanford.edu/SecondGeneration
+<http://webprotege.stanford.edu/SecondGeneration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                                  rdfs:label "SecondGeneration" .
+
+
+###  http://webprotege.stanford.edu/SecuriryMisconfiguration
+<http://webprotege.stanford.edu/SecuriryMisconfiguration> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                          dc:description "a result of insecure default configurations, incomplete or ad-hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information"^^xsd:string ;
+                                                          rdfs:label "SecuriryMisconfiguration" .
+
+
+###  http://webprotege.stanford.edu/Security
+<http://webprotege.stanford.edu/Security> rdf:type owl:Class ;
+                                          rdfs:subClassOf owl:Thing ;
+                                          rdfs:label "Security" .
+
+
+###  http://webprotege.stanford.edu/SelfInterpreter
+<http://webprotege.stanford.edu/SelfInterpreter> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/Interpreter> ;
+                                                 dc:description "interpreter written in a programming language which can interpret itself"^^xsd:string ;
+                                                 rdfs:label "SelfInterpreter" .
+
+
+###  http://webprotege.stanford.edu/SensitiveDataExposure
+<http://webprotege.stanford.edu/SensitiveDataExposure> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                       dc:description "web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and personally identifiable information"^^xsd:string ;
+                                                       rdfs:label "SensitiveDataExposure" .
+
+
+###  http://webprotege.stanford.edu/Server
+<http://webprotege.stanford.edu/Server> rdf:type owl:Class ;
+                                        rdfs:subClassOf owl:Thing ;
+                                        rdfs:label "Server" .
+
+
+###  http://webprotege.stanford.edu/ServerlessComputing
+<http://webprotege.stanford.edu/ServerlessComputing> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/CloudServiceModel> ;
+                                                     dc:description "a cloud computing code execution model in which the cloud provider fully manages starting and stopping virtual machines as necessary to serve requests, and requests are billed by an abstract measure of the resources required to satisfy the request, rather than per virtual machine, per hour"^^xsd:string ;
+                                                     rdfs:label "ServerlessComputing" .
+
+
+###  http://webprotege.stanford.edu/SingleLanguageIDE
+<http://webprotege.stanford.edu/SingleLanguageIDE> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+                                                   rdfs:label "SingleLanguageIDE" .
+
+
+###  http://webprotege.stanford.edu/SnifferAttack
+<http://webprotege.stanford.edu/SnifferAttack> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Attack> ;
+                                               dc:description "an application or device that can read, monitor, and capture network data exchanges and read network packets"^^xsd:string ;
+                                               rdfs:label "SnifferAttack" .
+
+
+###  http://webprotege.stanford.edu/SourceToSourceCompiler
+<http://webprotege.stanford.edu/SourceToSourceCompiler> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/CompilerType> ;
+                                                        dc:description "takes a high-level language as its input and outputs a high-level language"^^xsd:string ;
+                                                        rdfs:label "SourceToSourceCompiler" .
+
+
+###  http://webprotege.stanford.edu/Spiral
+<http://webprotege.stanford.edu/Spiral> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                        dc:description "each phase in spiral model begins with a design goal and ends with the client reviewing the progress"^^xsd:string ;
+                                        rdfs:label "Spiral" .
+
+
+###  http://webprotege.stanford.edu/Spoof
+<http://webprotege.stanford.edu/Spoof> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                       rdfs:label "Spoof" .
+
+
+###  http://webprotege.stanford.edu/StaticLibrary
+<http://webprotege.stanford.edu/StaticLibrary> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Library> ;
+                                               dc:description "linking  for a static library is performed during the creation of an executable or another object file"^^xsd:string ;
+                                               rdfs:label "StaticLibrary" .
+
+
+###  http://webprotege.stanford.edu/Steal
+<http://webprotege.stanford.edu/Steal> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/AttackType> ;
+                                       rdfs:label "Steal" .
+
+
+###  http://webprotege.stanford.edu/SystemLanguages
+<http://webprotege.stanford.edu/SystemLanguages> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageDomain> ;
+                                                 rdfs:label "SystemLanguages" .
+
+
+###  http://webprotege.stanford.edu/SystemVirtualMachines
+<http://webprotege.stanford.edu/SystemVirtualMachines> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/VirtualMachine> ;
+                                                       dc:description "provide a substitute for a real machine and provide functionality needed to execute entire operating systems"^^xsd:string ;
+                                                       rdfs:label "SystemVirtualMachines" .
+
+
+###  http://webprotege.stanford.edu/TheftOfResources
+<http://webprotege.stanford.edu/TheftOfResources> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/AttackResult> ;
+                                                  rdfs:label "TheftOfResources" .
+
+
+###  http://webprotege.stanford.edu/ThirdGeneration
+<http://webprotege.stanford.edu/ThirdGeneration> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/LanguageGeneration> ;
+                                                 rdfs:label "ThirdGeneration" .
+
+
+###  http://webprotege.stanford.edu/ThreadedCodeInterpreter
+<http://webprotege.stanford.edu/ThreadedCodeInterpreter> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/Interpreter> ;
+                                                         dc:description "are similar to bytecode interpreters but instead of bytes they use pointers" ;
+                                                         rdfs:label "ThreadedCodeInterpreter" .
+
+
+###  http://webprotege.stanford.edu/Toolkit
+<http://webprotege.stanford.edu/Toolkit> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                         rdfs:label "Toolkit" .
+
+
+###  http://webprotege.stanford.edu/Triplestore
+<http://webprotege.stanford.edu/Triplestore> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Database> ;
+                                             rdfs:label "Triplestore" .
+
+
+###  http://webprotege.stanford.edu/Typed
+<http://webprotege.stanford.edu/Typed> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageType> ;
+                                       owl:disjointWith <http://webprotege.stanford.edu/Untyped> ;
+                                       rdfs:label "Typed" .
+
+
+###  http://webprotege.stanford.edu/Ubuntu
+<http://webprotege.stanford.edu/Ubuntu> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Linux> ;
+                                        rdfs:label "Ubuntu" .
+
+
+###  http://webprotege.stanford.edu/Unix
+<http://webprotege.stanford.edu/Unix> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/OperatingSystem> ;
+                                      owl:disjointWith <http://webprotege.stanford.edu/Windows> ;
+                                      rdfs:label "Unix" .
+
+
+###  http://webprotege.stanford.edu/Untyped
+<http://webprotege.stanford.edu/Untyped> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/ProgrammingLanguageType> ;
+                                         rdfs:label "Untyped" .
+
+
+###  http://webprotege.stanford.edu/UserCommand
+<http://webprotege.stanford.edu/UserCommand> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> ;
+                                             rdfs:label "UserCommand" .
+
+
+###  http://webprotege.stanford.edu/UsingComponentsWithKnownVulnerabilities
+<http://webprotege.stanford.edu/UsingComponentsWithKnownVulnerabilities> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                                         dc:description "components, such as libraries, frameworks, and other software modules, run with the same privileges as the application"^^xsd:string ;
+                                                                         rdfs:label "UsingComponentsWithKnownVulnerabilities" .
+
+
+###  http://webprotege.stanford.edu/VCS
+<http://webprotege.stanford.edu/VCS> rdf:type owl:Class ;
+                                     rdfs:subClassOf owl:Thing ;
+                                     dc:description "Version control systems"^^xsd:string ;
+                                     rdfs:label "VCS" .
+
+
+###  http://webprotege.stanford.edu/Version
+<http://webprotege.stanford.edu/Version> rdf:type owl:Class ;
+                                         rdfs:subClassOf owl:Thing ;
+                                         rdfs:label "Version" .
+
+
+###  http://webprotege.stanford.edu/VerticalSaaS
+<http://webprotege.stanford.edu/VerticalSaaS> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/SaaS> ;
+                                              dc:description "answers the needs of a specific industry (e.g., software for the healthcare, agriculture, real estate, finance industries)"^^xsd:string ;
+                                              rdfs:label "VerticalSaaS" .
+
+
+###  http://webprotege.stanford.edu/VirtualMachine
+<http://webprotege.stanford.edu/VirtualMachine> rdf:type owl:Class ;
+                                                rdfs:subClassOf owl:Thing ;
+                                                rdfs:label "VirtualMachine" .
+
+
+###  http://webprotege.stanford.edu/VirtualServer
+<http://webprotege.stanford.edu/VirtualServer> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                               rdfs:label "VirtualServer" .
+
+
+###  http://webprotege.stanford.edu/VirtualizationType
+<http://webprotege.stanford.edu/VirtualizationType> rdf:type owl:Class ;
+                                                    rdfs:subClassOf owl:Thing ;
+                                                    rdfs:label "VirtualizationType" .
+
+
+###  http://webprotege.stanford.edu/Vulnerability
+<http://webprotege.stanford.edu/Vulnerability> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                               rdfs:label "Vulnerability"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/VulnerabilityType
+<http://webprotege.stanford.edu/VulnerabilityType> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/Security> ;
+                                                   rdfs:label "VulnerabilityType"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/Waterfall
+<http://webprotege.stanford.edu/Waterfall> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                           dc:description "is a sequential development approach, in which development is seen as flowing steadily downwards through several phases"^^xsd:string ;
+                                           rdfs:label "Waterfall" .
+
+
+###  http://webprotege.stanford.edu/WebApplicationFramework
+<http://webprotege.stanford.edu/WebApplicationFramework> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/Framework> ;
+                                                         dc:description "used for development of dynamic websites, web applications, and web services"^^xsd:string ;
+                                                         rdfs:label "WebApplicationFramework" .
+
+
+###  http://webprotege.stanford.edu/WebBrowser
+<http://webprotege.stanford.edu/WebBrowser> rdf:type owl:Class ;
+                                            rdfs:subClassOf owl:Thing ;
+                                            rdfs:label "WebBrowser" .
+
+
+###  http://webprotege.stanford.edu/WebServer
+<http://webprotege.stanford.edu/WebServer> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/Server> ;
+                                           dc:description "serve only HTTP content"^^xsd:string ;
+                                           rdfs:label "WebServer" .
+
+
+###  http://webprotege.stanford.edu/WebServiceProtocol
+<http://webprotege.stanford.edu/WebServiceProtocol> rdf:type owl:Class ;
+                                                    rdfs:subClassOf owl:Thing ;
+                                                    rdfs:label "WebServiceProtocol" .
+
+
+###  http://webprotege.stanford.edu/Webmail
+<http://webprotege.stanford.edu/Webmail> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/MailServer> ;
+                                         dc:description "Webmail (or web-based email) is any email client implemented as a web application running on a web server."^^xsd:string ;
+                                         rdfs:label "Webmail" .
+
+
+###  http://webprotege.stanford.edu/Windows
+<http://webprotege.stanford.edu/Windows> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/OperatingSystem> ;
+                                         rdfs:label "Windows" .
+
+
+###  http://webprotege.stanford.edu/XML
+<http://webprotege.stanford.edu/XML> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://webprotege.stanford.edu/DataFormat> ;
+                                     rdfs:label "XML" .
+
+
+###  http://webprotege.stanford.edu/XMLExternalEntities
+<http://webprotege.stanford.edu/XMLExternalEntities> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Vulnerability> ;
+                                                     dc:description "external entities can be used to disclose internal files using the file URI handler, internal file shares, internal port scanning, remote code execution, and denial of service attacks"^^xsd:string ;
+                                                     rdfs:label "XMLExternalEntities" .
+
+
+###  http://webprotege.stanford.edu/XP
+<http://webprotege.stanford.edu/XP> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://webprotege.stanford.edu/DevelopmentMetodology> ;
+                                    dc:description "is an agile software development framework that aims to produce higher quality software, and higher quality of life for the development team"^^xsd:string ;
+                                    rdfs:label "ExtremeProgramming"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/YML
+<http://webprotege.stanford.edu/YML> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://webprotege.stanford.edu/DataFormat> ;
+                                     rdfs:label "YML" .
+
+
+###  http://webprotege.stanford.edu/iOS
+<http://webprotege.stanford.edu/iOS> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://webprotege.stanford.edu/AppleOS> ;
+                                     rdfs:label "iOS" .
+
+
+###  http://webprotege.stanford.edu/Analytics_&AnalyticsAndBusinessIntelligencePattern
+<http://webprotege.stanford.edu/Analytics_&AnalyticsAndBusinessIntelligencePattern> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                                                    rdfs:label "AnalyticsAndBusinessIntelligencePattern" .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#DevelopmentStatus
+:DevelopmentStatus rdf:type owl:Class ;
+                   owl:equivalentClass <http://www.ebi.ac.uk/swo/maturity/SWO_9000061> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#DynamicParadigm
+:DynamicParadigm rdf:type owl:Class ;
+                 rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#InterNetwork
+:InterNetwork rdf:type owl:Class ;
+              rdfs:subClassOf <http://webprotege.stanford.edu/AttackTarget> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Issue
+:Issue rdf:type owl:Class .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Language
+:Language rdf:type owl:Class .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#License
+:License rdf:type owl:Class .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherAttackTool
+:OtherAttackTool rdf:type owl:Class ;
+                 rdfs:subClassOf <http://webprotege.stanford.edu/AttackTool> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherDeclarativeParadigm
+:OtherDeclarativeParadigm rdf:type owl:Class ;
+                          rdfs:subClassOf <http://webprotege.stanford.edu/DeclarativeParadigm> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherIDE
+:OtherIDE rdf:type owl:Class ;
+          rdfs:subClassOf <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherImperativeParadigm
+:OtherImperativeParadigm rdf:type owl:Class ;
+                         rdfs:subClassOf <http://webprotege.stanford.edu/ImperativeParadigm> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherLinuxOS
+:OtherLinuxOS rdf:type owl:Class ;
+              rdfs:subClassOf <http://webprotege.stanford.edu/Linux> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherParadigm
+:OtherParadigm rdf:type owl:Class ;
+               rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#OtherStructuredParadigm
+:OtherStructuredParadigm rdf:type owl:Class ;
+                         rdfs:subClassOf :StructuredParadigm .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ProbabilisticParadigm
+:ProbabilisticParadigm rdf:type owl:Class ;
+                       rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#RecursiveParadigm
+:RecursiveParadigm rdf:type owl:Class ;
+                   rdfs:subClassOf :StructuredParadigm .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repository
+:Repository rdf:type owl:Class ;
+            rdfs:label "Repository" .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#ScriptingLanguage
+:ScriptingLanguage rdf:type owl:Class ;
+                   rdfs:subClassOf <http://webprotege.stanford.edu/HighLevelLanguage> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#SoftwareInterface
+:SoftwareInterface rdf:type owl:Class ;
+                   owl:equivalentClass swo:SWO_9000050 .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Software_Licence_Clause
+:Software_Licence_Clause rdf:type owl:Class ;
+                         owl:equivalentClass swo:SWO_9000005 ;
+                         rdfs:subClassOf <http://webprotege.stanford.edu/Concept> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Software_Licenses
+:Software_Licenses rdf:type owl:Class ;
+                   owl:equivalentClass swo:SWO_0000002 ;
+                   rdfs:subClassOf <http://webprotege.stanford.edu/Concept> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#StructuredParadigm
+:StructuredParadigm rdf:type owl:Class ;
+                    rdfs:subClassOf <http://webprotege.stanford.edu/Paradigm> .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000002
+swo:SWO_0000002 rdf:type owl:Class .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_9000005
+swo:SWO_9000005 rdf:type owl:Class .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_9000050
+swo:SWO_9000050 rdf:type owl:Class .
+
+
+###  http://www.ebi.ac.uk/swo/maturity/SWO_9000061
+<http://www.ebi.ac.uk/swo/maturity/SWO_9000061> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/ontology/Java
+dbo:Java rdf:type owl:NamedIndividual ;
+         owl:sameAs :Java .
+
+
+###  http://webprotege.stanford.edu/Blackboard_system
+<http://webprotege.stanford.edu/Blackboard_system> rdf:type owl:NamedIndividual ,
+                                                            <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                   dc:description "A behavioral design pattern that provides a computational framework for the design and implementation of systems that integrate large and diverse specialized modules, and implement complex, non-deterministic control strategies."@en ;
+                                                   rdfs:label "Blackboard system"@en ;
+                                                   rdfs:seeAlso <https://www.wikiwand.com/en/Blackboard_(design_pattern)> .
+
+
+###  http://webprotege.stanford.edu/Broker_pattern
+<http://webprotege.stanford.edu/Broker_pattern> rdf:type owl:NamedIndividual ,
+                                                         <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                dc:description "The Broker architectural pattern can be used to structure distributed software systems with decoupled components that interact by remote service invocations. A broker component is responsible for coordinating communication, such as forwarding requests, as well as for transmitting results and exceptions."@en ;
+                                                rdfs:label "Broker pattern"@en ;
+                                                rdfs:seeAlso <https://www.wikiwand.com/en/Broker_pattern> .
+
+
+###  http://webprotege.stanford.edu/Classic_Machine_Learning
+<http://webprotege.stanford.edu/Classic_Machine_Learning> rdf:type owl:NamedIndividual ,
+                                                                   <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                          rdfs:label "Classic Machine Learning" .
+
+
+###  http://webprotege.stanford.edu/Data_Mart
+<http://webprotege.stanford.edu/Data_Mart> rdf:type owl:NamedIndividual ,
+                                                    <http://webprotege.stanford.edu/DataArchitecturePattern> ;
+                                           rdfs:label "Data Mart" .
+
+
+###  http://webprotege.stanford.edu/Data_Warehouse
+<http://webprotege.stanford.edu/Data_Warehouse> rdf:type owl:NamedIndividual ,
+                                                         <http://webprotege.stanford.edu/DataArchitecturePattern> ;
+                                                rdfs:label "Data Warehouse" .
+
+
+###  http://webprotege.stanford.edu/Decision_Management
+<http://webprotege.stanford.edu/Decision_Management> rdf:type owl:NamedIndividual ,
+                                                              <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                     rdfs:label "Decision Management" .
+
+
+###  http://webprotege.stanford.edu/Deep_Learning
+<http://webprotege.stanford.edu/Deep_Learning> rdf:type owl:NamedIndividual ,
+                                                        <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                               rdfs:label "Deep Learning" .
+
+
+###  http://webprotege.stanford.edu/E-R_Data_Modeling
+<http://webprotege.stanford.edu/E-R_Data_Modeling> rdf:type owl:NamedIndividual ,
+                                                            <http://webprotege.stanford.edu/DataModelingPattern> ;
+                                                   rdfs:label "E-R Data Modeling" .
+
+
+###  http://webprotege.stanford.edu/Enterprise_application_integration
+<http://webprotege.stanford.edu/Enterprise_application_integration> rdf:type owl:NamedIndividual ,
+                                                                             <http://webprotege.stanford.edu/DataIntegrationPattern> ;
+                                                                    rdfs:label "Enterprise application integration" .
+
+
+###  http://webprotege.stanford.edu/Enterprise_service_bus
+<http://webprotege.stanford.edu/Enterprise_service_bus> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/DataIntegrationPattern> ;
+                                                        rdfs:label "Enterprise service bus" .
+
+
+###  http://webprotege.stanford.edu/Event-driven_architecture
+<http://webprotege.stanford.edu/Event-driven_architecture> rdf:type owl:NamedIndividual ,
+                                                                    <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                           dc:description "Event-driven architecture (EDA), is a software architecture pattern promoting the production, detection, consumption of, and reaction to events. An event can be defined as \"a significant change in state\"."@en ;
+                                                           rdfs:label "Event-driven architecture"@en ;
+                                                           rdfs:seeAlso <https://www.wikiwand.com/en/Event-driven_architecture> ;
+                                                           skos:altLabel "EDA"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/Image_and_Video_Analysis
+<http://webprotege.stanford.edu/Image_and_Video_Analysis> rdf:type owl:NamedIndividual ,
+                                                                   <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                          rdfs:label "Image and Video Analysis" .
+
+
+###  http://webprotege.stanford.edu/Implicit_invocation
+<http://webprotege.stanford.edu/Implicit_invocation> rdf:type owl:NamedIndividual ,
+                                                              <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                     rdfs:label "Implicit invocation" .
+
+
+###  http://webprotege.stanford.edu/Layers
+<http://webprotege.stanford.edu/Layers> rdf:type owl:NamedIndividual ,
+                                                 <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                        rdfs:label "Layers" .
+
+
+###  http://webprotege.stanford.edu/Managed_file_transfer
+<http://webprotege.stanford.edu/Managed_file_transfer> rdf:type owl:NamedIndividual ,
+                                                                <http://webprotege.stanford.edu/DataIntegrationPattern> ;
+                                                       rdfs:label "Managed file transfer" .
+
+
+###  http://webprotege.stanford.edu/Master_Data_Hub
+<http://webprotege.stanford.edu/Master_Data_Hub> rdf:type owl:NamedIndividual ,
+                                                          <http://webprotege.stanford.edu/MasterDataManagementPattern> ;
+                                                 rdfs:label "Master Data Hub" .
+
+
+###  http://webprotege.stanford.edu/Master_Data_Store
+<http://webprotege.stanford.edu/Master_Data_Store> rdf:type owl:NamedIndividual ,
+                                                            <http://webprotege.stanford.edu/DataArchitecturePattern> ;
+                                                   rdfs:label "Master Data Store" .
+
+
+###  http://webprotege.stanford.edu/Microservices
+<http://webprotege.stanford.edu/Microservices> rdf:type owl:NamedIndividual ,
+                                                        <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                               rdfs:label "Microservices" .
+
+
+###  http://webprotege.stanford.edu/Model-view-controller
+<http://webprotege.stanford.edu/Model-view-controller> rdf:type owl:NamedIndividual ,
+                                                                <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                       <http://webprotege.stanford.edu/isImplementedBy> :Spring ;
+                                                       rdfs:label "Model-view-controller" .
+
+
+###  http://webprotege.stanford.edu/Multitier_architecture
+<http://webprotege.stanford.edu/Multitier_architecture> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                        rdfs:label "Multitier architecture" .
+
+
+###  http://webprotege.stanford.edu/Natural_Language_Generation
+<http://webprotege.stanford.edu/Natural_Language_Generation> rdf:type owl:NamedIndividual ,
+                                                                      <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                             rdfs:label "Natural Language Generation" .
+
+
+###  http://webprotege.stanford.edu/Operational_Data_Store
+<http://webprotege.stanford.edu/Operational_Data_Store> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/DataArchitecturePattern> ;
+                                                        rdfs:label "Operational Data Store" .
+
+
+###  http://webprotege.stanford.edu/Peer-to-peer
+<http://webprotege.stanford.edu/Peer-to-peer> rdf:type owl:NamedIndividual ,
+                                                       <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                              rdfs:label "Peer-to-peer" .
+
+
+###  http://webprotege.stanford.edu/Pipe_and_filter_architecture
+<http://webprotege.stanford.edu/Pipe_and_filter_architecture> rdf:type owl:NamedIndividual ,
+                                                                       <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                              rdfs:label "Pipe and filter architecture" .
+
+
+###  http://webprotege.stanford.edu/Robotic_Process_Automation
+<http://webprotege.stanford.edu/Robotic_Process_Automation> rdf:type owl:NamedIndividual ,
+                                                                     <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                            rdfs:label "Robotic Process Automation" .
+
+
+###  http://webprotege.stanford.edu/Service-oriented_architecture
+<http://webprotege.stanford.edu/Service-oriented_architecture> rdf:type owl:NamedIndividual ,
+                                                                        <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                               rdfs:label "Service-oriented architecture" .
+
+
+###  http://webprotege.stanford.edu/Space-based_architecture
+<http://webprotege.stanford.edu/Space-based_architecture> rdf:type owl:NamedIndividual ,
+                                                                   <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                          rdfs:label "Space-based architecture" .
+
+
+###  http://webprotege.stanford.edu/Speech_Recognition
+<http://webprotege.stanford.edu/Speech_Recognition> rdf:type owl:NamedIndividual ,
+                                                             <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                    rdfs:label "Speech Recognition" .
+
+
+###  http://webprotege.stanford.edu/Text_Analytics_and_NLP
+<http://webprotege.stanford.edu/Text_Analytics_and_NLP> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/ArtificialIntelligencePattern> ;
+                                                        rdfs:label "Text Analytics and NLP" .
+
+
+###  http://webprotege.stanford.edu/Transaction_Data_Stores
+<http://webprotege.stanford.edu/Transaction_Data_Stores> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/DataArchitecturePattern> ;
+                                                         rdfs:label "Transaction Data Stores" .
+
+
+###  http://webprotege.stanford.edu/Transactional_Reporting
+<http://webprotege.stanford.edu/Transactional_Reporting> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/Analytics_&AnalyticsAndBusinessIntelligencePattern> ;
+                                                         rdfs:label "Transactional Reporting" .
+
+
+###  http://webprotege.stanford.edu/imensional_Data_Modeling
+<http://webprotege.stanford.edu/imensional_Data_Modeling> rdf:type owl:NamedIndividual ,
+                                                                   <http://webprotege.stanford.edu/DataModelingPattern> ;
+                                                          rdfs:label "Dimensional Data Modeling"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/Data_Extraction_Transformation_%26_Loading
+<http://webprotege.stanford.edu/Data_Extraction_Transformation_%26_Loading> rdf:type owl:NamedIndividual ,
+                                                                                     <http://webprotege.stanford.edu/DataIntegrationPattern> ;
+                                                                            rdfs:label "Data Extraction Transformation & Loading" .
+
+
+###  http://webprotege.stanford.edu/Entity%E2%80%93component%E2%80%93system
+<http://webprotege.stanford.edu/Entity%E2%80%93component%E2%80%93system> rdf:type owl:NamedIndividual ,
+                                                                                  <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                                         rdfs:label "Entity–component–system" .
+
+
+###  http://webprotege.stanford.edu/Model%E2%80%93view%E2%80%93presenter
+<http://webprotege.stanford.edu/Model%E2%80%93view%E2%80%93presenter> rdf:type owl:NamedIndividual ,
+                                                                               <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                                      rdfs:label "Model–view–presenter" .
+
+
+###  http://webprotege.stanford.edu/Model%E2%80%93view%E2%80%93viewmodel
+<http://webprotege.stanford.edu/Model%E2%80%93view%E2%80%93viewmodel> rdf:type owl:NamedIndividual ,
+                                                                               <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                                      rdfs:label "Model–view–viewmodel" .
+
+
+###  http://webprotege.stanford.edu/Presentation%E2%80%93abstraction%E2%80%93control
+<http://webprotege.stanford.edu/Presentation%E2%80%93abstraction%E2%80%93control> rdf:type owl:NamedIndividual ,
+                                                                                           <http://webprotege.stanford.edu/ArchitecturalPattern> ;
+                                                                                  rdfs:label "Presentation–abstraction–control" .
+
+
+###  http://webprotege.stanford.edu/Publish%E2%80%93subscribe
+<http://webprotege.stanford.edu/Publish%E2%80%93subscribe> rdf:type owl:NamedIndividual ,
+                                                                    <http://webprotege.stanford.edu/MessagingPattern> ;
+                                                           rdfs:label "Publish–subscribe" .
+
+
+###  http://webprotege.stanford.edu/Request%E2%80%93response
+<http://webprotege.stanford.edu/Request%E2%80%93response> rdf:type owl:NamedIndividual ,
+                                                                   <http://webprotege.stanford.edu/MessagingPattern> ;
+                                                          rdfs:label "Request–response" .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Github
+:Github rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/CentralizedVCS> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Glassfish
+:Glassfish rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/ApplicationServer> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Intelij
+:Intelij rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment> ;
+         <http://webprotege.stanford.edu/hasVCSIntegration> :Github .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Issue1
+:Issue1 rdf:type owl:NamedIndividual .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#JIT
+:JIT rdf:type owl:NamedIndividual ,
+              <http://webprotege.stanford.edu/JustInTimeCompiler> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#JVM
+:JVM rdf:type owl:NamedIndividual ,
+              <http://webprotege.stanford.edu/ProcessVirtualMachines> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Java
+:Java rdf:type owl:NamedIndividual ,
+               :Language ;
+      :hasLicense :LDCI ;
+      :hasRepository :TestRepo ;
+      :useSDK :JavaSDK ;
+      :useVirtualMachine :JVM .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#JavaCCPlugin
+:JavaCCPlugin rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/IDEPlugin> ;
+              :hasLicense :MIT .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#JavaCompiler
+:JavaCompiler rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/CrossCompiler> ;
+              <http://webprotege.stanford.edu/hasCompilerType> :JIT .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#JavaSDK
+:JavaSDK rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/SDK> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Jboss
+:Jboss rdf:type owl:NamedIndividual ,
+                <http://webprotege.stanford.edu/ApplicationServer> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#LDCI
+:LDCI rdf:type owl:NamedIndividual ,
+               :License ;
+      dc:description "License for the Distribution of Compliant Implementations" .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#MIT
+:MIT rdf:type owl:NamedIndividual ,
+              :License .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Spring
+:Spring rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/Framework> ;
+        :isFrameworkFor :Java .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#TestRepo
+:TestRepo rdf:type owl:NamedIndividual ,
+                   :Repository ;
+          :hasIssue :Issue1 ,
+                    :issue2 .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Tomcat
+:Tomcat rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/ApplicationServer> .
+
+
+###  http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#issue2
+:issue2 rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/AbstractSyntaxTreeInterpreter>
+                <http://webprotege.stanford.edu/BytecodeInterpreter>
+                <http://webprotege.stanford.edu/SelfInterpreter>
+                <http://webprotege.stanford.edu/ThreadedCodeInterpreter>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Account>
+                <http://webprotege.stanford.edu/Component>
+                <http://webprotege.stanford.edu/Computer>
+                <http://webprotege.stanford.edu/Data>
+                <http://webprotege.stanford.edu/Network>
+                <http://webprotege.stanford.edu/Process>
+                :InterNetwork
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Android>
+                <http://webprotege.stanford.edu/AppleOS>
+                <http://webprotege.stanford.edu/Linux>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Apache>
+                <http://webprotege.stanford.edu/GWS>
+                <http://webprotege.stanford.edu/IIS>
+                <http://webprotege.stanford.edu/LiteSpeedWebServer>
+                <http://webprotege.stanford.edu/Nginx>
+                <http://webprotege.stanford.edu/Others>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ApplicationFramework>
+                <http://webprotege.stanford.edu/CSSFramework>
+                <http://webprotege.stanford.edu/ContentManagementFramework>
+                <http://webprotege.stanford.edu/MultimediaFramework>
+                <http://webprotege.stanford.edu/OtherFramework>
+                <http://webprotege.stanford.edu/WebApplicationFramework>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ApplicationLanguages>
+                <http://webprotege.stanford.edu/ArchitecturalLanguages>
+                <http://webprotege.stanford.edu/SystemLanguages>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ApplicationLayerAttack>
+                <http://webprotege.stanford.edu/CompromisedKeyAttack>
+                <http://webprotege.stanford.edu/DataModificationAttack>
+                <http://webprotege.stanford.edu/DenialOfServiceAttack>
+                <http://webprotege.stanford.edu/EavesdroppingAttack>
+                <http://webprotege.stanford.edu/IdentitySpoofingAttack>
+                <http://webprotege.stanford.edu/ManInTheMiddleAttack>
+                <http://webprotege.stanford.edu/PasswordBasedAttack>
+                <http://webprotege.stanford.edu/SnifferAttack>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ApplicationServer>
+                <http://webprotege.stanford.edu/DatabaseServer>
+                <http://webprotege.stanford.edu/FileServer>
+                <http://webprotege.stanford.edu/MailServer>
+                <http://webprotege.stanford.edu/MobileServer>
+                <http://webprotege.stanford.edu/ProxyServer>
+                <http://webprotege.stanford.edu/VirtualServer>
+                <http://webprotege.stanford.edu/WebServer>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ApplicationVirtualization>
+                <http://webprotege.stanford.edu/DesktopVirtualization>
+                <http://webprotege.stanford.edu/NetworkVirtualization>
+                <http://webprotege.stanford.edu/PlatformVirtualization>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ArtificialIntelligencePattern>
+                <http://webprotege.stanford.edu/DataArchitecturePattern>
+                <http://webprotege.stanford.edu/DataIntegrationPattern>
+                <http://webprotege.stanford.edu/DataModelingPattern>
+                <http://webprotege.stanford.edu/MasterDataManagementPattern>
+                <http://webprotege.stanford.edu/Analytics_&AnalyticsAndBusinessIntelligencePattern>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Attack>
+                <http://webprotege.stanford.edu/AttackResult>
+                <http://webprotege.stanford.edu/AttackTarget>
+                <http://webprotege.stanford.edu/AttackTool>
+                <http://webprotege.stanford.edu/AttackType>
+                <http://webprotege.stanford.edu/Vulnerability>
+                <http://webprotege.stanford.edu/VulnerabilityType>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Authenticate>
+                <http://webprotege.stanford.edu/Bypass>
+                <http://webprotege.stanford.edu/Copy>
+                <http://webprotege.stanford.edu/Delete>
+                <http://webprotege.stanford.edu/Flood>
+                <http://webprotege.stanford.edu/Modify>
+                <http://webprotege.stanford.edu/Probe>
+                <http://webprotege.stanford.edu/Read>
+                <http://webprotege.stanford.edu/Scan>
+                <http://webprotege.stanford.edu/Spoof>
+                <http://webprotege.stanford.edu/Steal>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/AutonomusAgent>
+                <http://webprotege.stanford.edu/DataTap>
+                <http://webprotege.stanford.edu/DistributedTool>
+                <http://webprotege.stanford.edu/InformationExchange>
+                <http://webprotege.stanford.edu/PhisicalAttack>
+                <http://webprotege.stanford.edu/ScriptOrProgram>
+                <http://webprotege.stanford.edu/Toolkit>
+                <http://webprotege.stanford.edu/UserCommand>
+                :OtherAttackTool
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/BrokenAccessControl>
+                <http://webprotege.stanford.edu/BrokenAuthentication>
+                <http://webprotege.stanford.edu/CrossSiteScripting>
+                <http://webprotege.stanford.edu/Injection>
+                <http://webprotege.stanford.edu/InsecureDeserialisation>
+                <http://webprotege.stanford.edu/InsufficientLoggingAndMonitoring>
+                <http://webprotege.stanford.edu/OtherVulnerability>
+                <http://webprotege.stanford.edu/SecuriryMisconfiguration>
+                <http://webprotege.stanford.edu/SensitiveDataExposure>
+                <http://webprotege.stanford.edu/UsingComponentsWithKnownVulnerabilities>
+                <http://webprotege.stanford.edu/XMLExternalEntities>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/BuildAutomationTool>
+                <http://webprotege.stanford.edu/CodeEditor>
+                <http://webprotege.stanford.edu/Debugger>
+                <http://webprotege.stanford.edu/OtherIDEFacility>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/BytecodeCompiler>
+                <http://webprotege.stanford.edu/HardwareCompiler>
+                <http://webprotege.stanford.edu/JustInTimeCompiler>
+                <http://webprotege.stanford.edu/SourceToSourceCompiler>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/CentOS>
+                <http://webprotege.stanford.edu/Cobalt>
+                <http://webprotege.stanford.edu/Debian>
+                <http://webprotege.stanford.edu/Fedora>
+                <http://webprotege.stanford.edu/Mint>
+                <http://webprotege.stanford.edu/RedHat>
+                <http://webprotege.stanford.edu/Ubuntu>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/CentOS>
+                <http://webprotege.stanford.edu/Cobalt>
+                <http://webprotege.stanford.edu/Debian>
+                <http://webprotege.stanford.edu/Fedora>
+                <http://webprotege.stanford.edu/Mint>
+                <http://webprotege.stanford.edu/RedHat>
+                <http://webprotege.stanford.edu/Ubuntu>
+                :OtherLinuxOS
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/CentralizedVCS>
+                <http://webprotege.stanford.edu/DistributedVCS>
+                <http://webprotege.stanford.edu/LocalVCS>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Cloud>
+                <http://webprotege.stanford.edu/CloudServiceModel>
+                <http://webprotege.stanford.edu/Compiler>
+                <http://webprotege.stanford.edu/CompilerType>
+                <http://webprotege.stanford.edu/Concept>
+                <http://webprotege.stanford.edu/DataFormat>
+                <http://webprotege.stanford.edu/Database>
+                <http://webprotege.stanford.edu/DevelopmentMetodology>
+                <http://webprotege.stanford.edu/Framework>
+                <http://webprotege.stanford.edu/IDEFacilitiy>
+                <http://webprotege.stanford.edu/IDEPlugin>
+                <http://webprotege.stanford.edu/IntegratedDevelopmentEnvironment>
+                <http://webprotege.stanford.edu/Interpreter>
+                <http://webprotege.stanford.edu/LanguageGeneration>
+                <http://webprotege.stanford.edu/Library>
+                <http://webprotege.stanford.edu/OperatingSystem>
+                <http://webprotege.stanford.edu/Paradigm>
+                <http://webprotege.stanford.edu/ProgrammingLanguageDomain>
+                <http://webprotege.stanford.edu/ProgrammingLanguageRunType>
+                <http://webprotege.stanford.edu/ProgrammingLanguageType>
+                <http://webprotege.stanford.edu/SDK>
+                <http://webprotege.stanford.edu/Security>
+                <http://webprotege.stanford.edu/Server>
+                <http://webprotege.stanford.edu/VCS>
+                <http://webprotege.stanford.edu/Version>
+                <http://webprotege.stanford.edu/VirtualMachine>
+                <http://webprotege.stanford.edu/VirtualizationType>
+                <http://webprotege.stanford.edu/WebBrowser>
+                <http://webprotege.stanford.edu/WebServiceProtocol>
+                :Language
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ConfigurationManagementTool>
+                <http://webprotege.stanford.edu/ContinuousIntegrationTool>
+                <http://webprotege.stanford.edu/OtherTool>
+                <http://webprotege.stanford.edu/PackageManagerTool>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ConfigurationVulnerability>
+                <http://webprotege.stanford.edu/DesignVulnerability>
+                <http://webprotege.stanford.edu/ImlementationVulnerability>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/CorruptionOfInformation>
+                <http://webprotege.stanford.edu/DenialOfService>
+                <http://webprotege.stanford.edu/DisclosureOfInformation>
+                <http://webprotege.stanford.edu/InreasedAccess>
+                <http://webprotege.stanford.edu/TheftOfResources>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/Crystal>
+                <http://webprotege.stanford.edu/DynamicSystemsDevelopmentModel>
+                <http://webprotege.stanford.edu/FeatureDrivenDevelopment>
+                <http://webprotege.stanford.edu/Lean>
+                <http://webprotege.stanford.edu/OtherMethodology>
+                <http://webprotege.stanford.edu/RapidApplicationDevelopment>
+                <http://webprotege.stanford.edu/Scrum>
+                <http://webprotege.stanford.edu/Spiral>
+                <http://webprotege.stanford.edu/Waterfall>
+                <http://webprotege.stanford.edu/XP>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/DeclarativeParadigm>
+                <http://webprotege.stanford.edu/ImperativeParadigm>
+                <http://webprotege.stanford.edu/MultiParadigm>
+                :DynamicParadigm
+                :OtherParadigm
+                :ProbabilisticParadigm
+                :StructuredParadigm
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/DeductiveDatabase>
+                <http://webprotege.stanford.edu/HierarchicalDatabase>
+                <http://webprotege.stanford.edu/NetworkDatabase>
+                <http://webprotege.stanford.edu/NoSql>
+                <http://webprotege.stanford.edu/ObjectOrientedDatabase>
+                <http://webprotege.stanford.edu/ObjectRelationalDatabase>
+                <http://webprotege.stanford.edu/ProbabilisticDatabase>
+                <http://webprotege.stanford.edu/RelationalDatabase>
+                <http://webprotege.stanford.edu/Triplestore>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/DocumentBasedDatabase>
+                <http://webprotege.stanford.edu/GraphDatabase>
+                <http://webprotege.stanford.edu/MultivalueDatabase>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/FifthGeneration>
+                <http://webprotege.stanford.edu/FirstGeneration>
+                <http://webprotege.stanford.edu/FourthGeneration>
+                <http://webprotege.stanford.edu/SecondGeneration>
+                <http://webprotege.stanford.edu/ThirdGeneration>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/FullVirtualization>
+                <http://webprotege.stanford.edu/ParaVirtualization>
+                <http://webprotege.stanford.edu/PartialVirtualization>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/FunctionalParadigm>
+                <http://webprotege.stanford.edu/LogicParadigm>
+                :OtherDeclarativeParadigm
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/GraphQL>
+                <http://webprotege.stanford.edu/REST>
+                <http://webprotege.stanford.edu/SOAP>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/HybridCloud>
+                <http://webprotege.stanford.edu/OtherCloudModel>
+                <http://webprotege.stanford.edu/PrivateCloud>
+                <http://webprotege.stanford.edu/PublicCloud>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/HypertextDatabase>
+                <http://webprotege.stanford.edu/MultimediaDatabase>
+                <http://webprotege.stanford.edu/OtherObjectOrientedDatabase>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/IMAPServer>
+                <http://webprotege.stanford.edu/POP3Server>
+                <http://webprotege.stanford.edu/SMTPServer>
+                <http://webprotege.stanford.edu/Webmail>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/IaaS>
+                <http://webprotege.stanford.edu/MSaaS>
+                <http://webprotege.stanford.edu/Paas>
+                <http://webprotege.stanford.edu/SaaS>
+                <http://webprotege.stanford.edu/ServerlessComputing>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://webprotege.stanford.edu/ObjectOrientedParadigm>
+                :OtherStructuredParadigm
+                :RecursiveParadigm
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
