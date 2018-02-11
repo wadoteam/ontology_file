@@ -548,6 +548,15 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasPrimaryLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasPrimaryLanguage">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repository"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Language"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasRepository -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasRepository">
@@ -599,6 +608,52 @@
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasCreatedDate">
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Issue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasDescription">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Issue"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasLink -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasLink">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasPriority -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasPriority">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasStars -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#hasStars">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Repository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#isClosed -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#isClosed">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/BNheXqpQbFxGhfZ0oWHJp1#Issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
